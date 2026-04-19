@@ -24,3 +24,9 @@ dist-ssr
 *.sw?
 /node_modules/
 /.vscode/
+
+
+# Added by cargo
+
+/target
+/pnpm-lock.yaml
