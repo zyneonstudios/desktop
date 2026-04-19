@@ -49,9 +49,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: app-v__VERSION__ # Wird automatisch aus tauri.conf.json gelesen
-          releaseName: "Zyneon Desktop v__VERSION__"
-          releaseBody: "Automatischer Build von GitHub Actions"
-          releaseDraft: true
-          prerelease: false
+          tagName: automatic-__VERSION__.${{ github.sha }} # Wird automatisch aus tauri.conf.json gelesen
+          releaseName: "Zyneon Desktop automatic __VERSION__}"
+          releaseBody: "Build for commit ${{ github.sha }}"
+          releaseDraft: false
+          prerelease: true
           args: ${{ matrix.args }}

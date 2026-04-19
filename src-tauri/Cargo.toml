@@ -1,6 +1,6 @@
 [package]
 name = "app"
-version = "27.0.0-early.0"
+version = "27.0.0-beta.0"
 description = "Zyneon Desktop App"
 authors = ["Zyneon Apex", "Zyneon Studios", "Zyneon", "nerotvlive"]
 license = "GPL-3"
