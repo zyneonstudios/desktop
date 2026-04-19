@@ -14,7 +14,7 @@ Work in progress... No README.md.
 
 ---
 
-### To-do list for 27.0.0-beta.1
+### To-do list for 27.0.1
 - [ ] Finish UI prototype
   - [ ] Add Dashboard page and basic functionality
   - [ ] Add Discover page and basic functionality

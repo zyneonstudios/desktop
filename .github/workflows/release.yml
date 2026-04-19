@@ -3,7 +3,7 @@ name: "Publish Release"
 on:
   push:
     branches:
-      - main # Oder dein Haupt-Branch
+      - main
 
 jobs:
   publish-tauri:
@@ -13,13 +13,13 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - platform: "macos-latest" # Für Apple Silicon & Intel
+          - platform: "macos-latest"
             args: "--target aarch64-apple-darwin"
           - platform: "macos-latest"
             args: "--target x86_64-apple-darwin"
-          - platform: "ubuntu-22.04" # Für Linux (.deb, AppImage)
+          - platform: "ubuntu-22.04"
             args: ""
-          - platform: "windows-latest" # Für Windows (.exe, .msi)
+          - platform: "windows-latest"
             args: ""
 
     runs-on: ${{ matrix.platform }}
@@ -49,8 +49,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: automatic-__VERSION__.${{ github.sha }} # Wird automatisch aus tauri.conf.json gelesen
-          releaseName: "Zyneon Desktop automatic __VERSION__}"
+          tagName: __VERSION__-${{ github.sha }}
+          releaseName: "Zyneon Desktop automatic __VERSION__"
           releaseBody: "Build for commit ${{ github.sha }}"
           releaseDraft: false
           prerelease: true
