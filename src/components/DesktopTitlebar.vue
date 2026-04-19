@@ -9,12 +9,13 @@
   <div class="titlebar h-10 w-full">
     <div class="content h-10 w-full">
       <div data-tauri-drag-region class="start">
-
+        <slot name="start"></slot>
       </div>
       <strong data-tauri-drag-region class="title">
         {{ title }}
       </strong>
       <div data-tauri-drag-region class="end">
+        <slot name="end"></slot>
         <div class="window-controls-placeholder"></div>
       </div>
     </div>

@@ -3,19 +3,15 @@
 </script>
 
 <template>
-  <div class="h-full w-full flex">
-    <div class="w-full h-full ">
+  <div class="h-full w-full flex-view">
       <slot name="left"></slot>
-    </div>
-    <div class="w-full h-full">
-      <slot name="center" class="w-full"></slot>
-    </div>
-    <div class="w-full h-full">
-      <slot name="right" class="w-full"></slot>
-    </div>
+      <slot name="center"></slot>
+      <slot name="right"></slot>
   </div>
 </template>
 
 <style scoped>
-
+.flex-view {
+  display: flex;
+}
 </style>

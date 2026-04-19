@@ -14,7 +14,11 @@ Work in progress... No README.md.
 
 ---
 
-### To-do list for 27.0.1
+## `ALPHA` `v27.0.1`
+
+---
+
+### To-do list for 27.1.0
 - [ ] Finish UI prototype
   - [ ] Add Dashboard page and basic functionality
   - [ ] Add Discover page and basic functionality
@@ -50,3 +54,17 @@ Work in progress... No README.md.
     - [ ] Instance settings (fallback to default instance settings (changeable in settings))
     - [ ] Instance content list (with search-like filtercard and searchbar and sorting) with actions
     - [ ] Add instance content (preconfigured redirect to search)
+
+---
+
+#### Changelogs
+
+> **v27.0.1**<br>
+> **unreleased** > work in progress
+
+> **v27.0.0**<br>
+> Initial alpha prototype release<br>
+> -Set versioning: MV.SV.PN<br>
+>   -MV (27): Major Version/Rewrite<br>
+>   -SV (0): Subversion/Number of 'stable-versions'/Number of Updates<br>
+>   -PN (0): Patch Number<br>
