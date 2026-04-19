@@ -8,13 +8,13 @@
     <DesktopTitlebar class="zyneon-desktop-titlebar" title="Zyneon Desktop" />
     <DesktopRootView class="zyneon-desktop-content">
       <template #left>
-        TEST RECHTS
+        TEST LINKS
       </template>
       <template #center>
         TEST MITTE
       </template>
       <template #right>
-        TEST LINKS
+        TEST RECHTS
       </template>
     </DesktopRootView>
   </div>
