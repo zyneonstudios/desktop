@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+:root {
+
+}
+
+body {
+  @apply bg-zinc-900;
+  @apply text-zinc-400
+}
