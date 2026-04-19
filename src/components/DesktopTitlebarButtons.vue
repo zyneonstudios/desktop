@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import '../assets/zyneon/css/components/titlebar-buttons.css'
   import "bootstrap-icons/font/bootstrap-icons.min.css"
   import { getCurrentWindow } from '@tauri-apps/api/window';
 

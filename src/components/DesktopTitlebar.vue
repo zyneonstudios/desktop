@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import '../assets/zyneon/css/components/titlebar.css';
   import DesktopTitlebarButtons from "./DesktopTitlebarButtons.vue";
   defineProps<{
     title: string
@@ -22,3 +21,48 @@
     <DesktopTitlebarButtons />
   </div>
 </template>
+
+<style scoped>
+  .titlebar {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    user-select: none;
+
+    .content {
+      display: flex;
+      overflow: hidden;
+
+      .start, .title, .end {
+        width: 100%;
+        min-height: 40px;
+        max-height: 40px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .start {
+        justify-content: start;
+      }
+
+      .title {
+        padding: 0; margin: 0;
+        min-width: fit-content;
+        max-width: fit-content;
+        justify-content: center;
+      }
+
+      .end {
+        justify-content: end;
+
+        .window-controls-placeholder {
+          width: 120px;
+          height: 40px;
+        }
+      }
+    }
+  }
+</style>
