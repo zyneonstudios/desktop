@@ -54,6 +54,11 @@ Work in progress... No README.md.
     - [ ] Instance settings (fallback to default instance settings (changeable in settings))
     - [ ] Instance content list (with search-like filtercard and searchbar and sorting) with actions
     - [ ] Add instance content (preconfigured redirect to search)
+- [ ] Downloads
+  - [ ] See active download(s)
+  - [ ] Download Actions Pause(/Resume) Cancel Retry
+  - [ ] See waiting and paused downloads
+  - [ ] Download history for session with state display (Canceled/Failed/Finished)
 
 ---
 
