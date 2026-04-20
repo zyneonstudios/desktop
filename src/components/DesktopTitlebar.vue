@@ -12,7 +12,7 @@
         <slot name="start"></slot>
       </div>
       <strong data-tauri-drag-region class="title">
-        {{ title }}
+        <img alt="" class="z-n1 h-4" data-tauri-drag-region src="../assets/zyneon/img/zyneon-desktop-title.png">
       </strong>
       <div data-tauri-drag-region class="end">
         <slot name="end"></slot>
@@ -36,7 +36,7 @@
       display: flex;
       overflow: hidden;
 
-      .start, .title, .end {
+      .start, .end {
         width: 100%;
         min-height: 40px;
         max-height: 40px;
@@ -50,10 +50,13 @@
       }
 
       .title {
-        padding: 0; margin: 0;
         min-width: fit-content;
         max-width: fit-content;
-        justify-content: center;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        font-weight: 500;
+        margin-bottom: 0.2rem; /*revisit*/
       }
 
       .end {

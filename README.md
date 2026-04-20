@@ -14,7 +14,7 @@ Work in progress... No README.md.
 
 ---
 
-## `ALPHA` `v27.0.1`
+## `ALPHA` `v27.0.2`
 
 ---
 
@@ -64,7 +64,7 @@ Work in progress... No README.md.
 
 #### Changelogs
 
-> **v27.0.1**<br>
+> **v27.0.2**<br>
 > **unreleased** > work in progress
 
 > **v27.0.0**<br>

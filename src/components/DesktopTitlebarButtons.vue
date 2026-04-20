@@ -19,8 +19,38 @@
 
 <template>
   <div class="titlebar-buttons flex w-fit absolute right-0 top-0">
-    <button type="button" @click="minimize" class="hover:bg-zinc-700 hover:text-white w-10 h-10 hover:cursor-pointer"><i class="bi bi-dash-lg"></i></button>
-    <button type="button" @click="toggleMaximize" class="hover:bg-zinc-600 hover:text-white w-10 h-10 hover:cursor-pointer"><i class="bi bi-square"></i></button>
-    <button type="button" @click="close" class="hover:bg-red-600 hover:text-white w-10 h-10 hover:cursor-pointer"><i class="bi bi-x-lg"></i></button>
+    <button type="button" @click="minimize"><i class="bi bi-dash-lg"></i></button>
+    <button type="button" @click="toggleMaximize" class="smaller"><i class="bi bi-square"></i></button>
+    <button type="button" @click="close" class="red"><i class="bi bi-x-lg"></i></button>
   </div>
 </template>
+
+<style scoped>
+.titlebar-buttons {
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    width: 40px;
+    height: 40px;
+    background: none;
+  }
+
+  button:hover {
+    background: var(--zyn-background-light);
+  }
+
+  button.red:hover {
+    background: var(--color-red-600);
+  };
+
+  button.smaller {
+    font-size: 0.8em;
+  }
+}
+</style>
