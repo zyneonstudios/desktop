@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import 'lucide-static/font/lucide.css';
 
 :root {
   /*
@@ -371,4 +370,25 @@ body {
   .zyn-btn:active, .button:active, .btn:active {
 
   }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.8);
 }

@@ -14,7 +14,7 @@ Work in progress... No README.md.
 
 ---
 
-## `ALPHA` `v27.0.3`
+## `ALPHA` `v27.0.4`
 
 ---
 
@@ -61,15 +61,3 @@ Work in progress... No README.md.
   - [ ] Download history for session with state display (Canceled/Failed/Finished)
 
 ---
-
-#### Changelogs
-
-> **v27.0.3**<br>
-> **unreleased** > work in progress
-
-> **v27.0.0**<br>
-> Initial alpha prototype release<br>
-> -Set versioning: MV.SV.PN<br>
->   -MV (27): Major Version/Rewrite<br>
->   -SV (0): Subversion/Number of 'stable-versions'/Number of Updates<br>
->   -PN (0): Patch Number<br>

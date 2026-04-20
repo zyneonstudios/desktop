@@ -59,3 +59,7 @@ dist-ssr
 # already existing elements were commented out
 
 #/target
+/init.sh
+/init.bat
+/init.ps1
+/init.cmd

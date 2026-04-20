@@ -14,7 +14,7 @@
     }
 
     button:hover {
-        background: var(--zyn-background-light);
+        background: var(--zyn-background-brighter);
     }
 
     button.red:hover {

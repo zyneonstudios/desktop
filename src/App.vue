@@ -3,6 +3,12 @@
   import DesktopRootView from "./components/DesktopRootView.vue";
   import DesktopPane from "./components/DesktopPane.vue";
   import DesktopSideMenu from "./components/DesktopSideMenu.vue";
+  import DesktopDashboard from "./pages/DesktopDashboard.vue";
+  import DesktopDiscover from "./pages/DesktopDiscover.vue";
+  import DesktopDownloads from "./pages/DesktopDownloads.vue";
+  import DesktopLibrary from "./pages/DesktopLibrary.vue";
+  import DesktopSearch from "./pages/DesktopSearch.vue";
+  import DesktopSettings from "./pages/DesktopSettings.vue";
 
   document.addEventListener('contextmenu', (e) => {
     e.preventDefault()
@@ -10,14 +16,11 @@
 </script>
 
 <template>
-  <div class="zyneon-desktop" id="main">
+  <div class="zyneon-desktop zyn-background-body" id="main">
     <DesktopTitlebar class="zyneon-desktop-titlebar" title="Zyneon Desktop">
       <template #start>
         <div class="w-full h-full flex justify-start items-center" data-tauri-drag-region>
           <img alt="" class="z-n1 h-4 ml-3" src="./assets/zyneon/img/zyneon-desktop-title.png" data-tauri-drag-region>
-          <label>
-            <input type="text" placeholder="placeholder for smartbar" class="outline-none zyn-background-darkest py-0 ml-2 px-3 rounded-xl opacity-50 cursor-not-allowed" disabled>
-          </label>
         </div>
       </template>
       <template #title>
@@ -25,7 +28,7 @@
       </template>
       <template #end>
         <div class="w-full h-full flex justify-end items-center pr-6" data-tauri-drag-region>
-          ALPHA v27/0.3
+          ALPHA v27/0.4
         </div>
       </template>
     </DesktopTitlebar>
@@ -40,7 +43,7 @@
          </template>
          <template #center>
            <button class="btn">
-             <i class="icon-layout-dashboard"></i>
+             <i class="bi bi-grid-fill"></i>
              <span>Dashboard</span>
            </button>
            <button class="btn">
@@ -48,7 +51,7 @@
              <span>Discover</span>
            </button>
            <button class="btn">
-             <i class="icon-library"></i>
+             <i class="bi bi-controller"></i>
              <span>Library</span>
            </button>
          </template>
@@ -58,11 +61,11 @@
              <span>Reload</span>
            </button>
            <button class="btn" onclick="document.getElementById('main').classList.toggle('zyn-background-body');">
-             <i class="icon-sparkles"></i>
+             <i class="bi bi-stars"></i>
              <span>Toggle background effect</span>
            </button>
            <button class="btn">
-             <i class="icon-sun-moon"></i>
+             <i class="bi bi-palette"></i>
              <span>Toggle theme</span>
            </button>
            <button class="btn">
@@ -74,7 +77,12 @@
       </template>
       <template #center>
         <DesktopPane class="zyneon-desktop-content zyn-shadow-xl">
-
+          <DesktopDashboard />
+          <DesktopDiscover />
+          <DesktopDownloads />
+          <DesktopLibrary />
+          <DesktopSearch />
+          <DesktopSettings />
         </DesktopPane>
       </template>
     </DesktopRootView>
@@ -98,6 +106,8 @@
         border-top: 1px solid var(--zyn-ov-brighter-200);
         border-left: 1px solid var(--zyn-ov-brighter-200);
         position: relative;
+        overflow: hidden;
+        overflow-y: auto;
       }
     }
   }
