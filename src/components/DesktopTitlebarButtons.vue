@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import '../assets/zyneon/css/components/desktop-titlebar-buttons.css';
   import "bootstrap-icons/font/bootstrap-icons.min.css"
   import { getCurrentWindow } from '@tauri-apps/api/window';
 
@@ -24,33 +25,3 @@
     <button type="button" @click="close" class="red"><i class="bi bi-x-lg"></i></button>
   </div>
 </template>
-
-<style scoped>
-.titlebar-buttons {
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    padding: 0;
-    margin: 0;
-    box-shadow: none;
-    border-radius: 0;
-    width: 40px;
-    height: 40px;
-    background: none;
-  }
-
-  button:hover {
-    background: var(--zyn-background-light);
-  }
-
-  button.red:hover {
-    background: var(--color-red-600);
-  };
-
-  button.smaller {
-    font-size: 0.8em;
-  }
-}
-</style>

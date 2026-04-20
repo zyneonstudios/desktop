@@ -1,0 +1,27 @@
+.titlebar-buttons {
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        width: 40px;
+        height: 40px;
+        background: none;
+    }
+
+    button:hover {
+        background: var(--zyn-background-light);
+    }
+
+    button.red:hover {
+        background: var(--color-red-600);
+    };
+
+    button.smaller {
+        font-size: 0.8em;
+    }
+}

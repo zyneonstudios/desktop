@@ -1,0 +1,54 @@
+.desktop-side-menu {
+    display: flex;
+    flex-direction: column;
+    transition: var(--zyn-transition);
+    position: relative;
+    width: 3rem;
+    overflow: hidden;
+
+    .top, .center, .bottom {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid var(--zyn-ov-brighter-200);
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    .center, .bottom {
+        padding-top: 0.5rem;
+        height: fit-content;
+    }
+
+    .bottom {
+        flex-grow: 1;
+        border-bottom: none;
+        justify-content: flex-end;
+    }
+
+    button {
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        margin: 0 0.5rem 0.5rem 0.5rem;
+
+        span {
+            display: none;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.desktop-side-menu.active {
+    width: 20rem;
+
+    button {
+        width: 15rem;
+
+        span {
+            display: inline;
+        }
+    }
+}

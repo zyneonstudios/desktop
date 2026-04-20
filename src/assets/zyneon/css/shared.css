@@ -1,13 +1,29 @@
 @import "tailwindcss";
+@import 'lucide-static/font/lucide.css';
 
 :root {
   /*
   background variables & classes
   */
 
-  --zyn-background: #202020;
+  --zyn-background-app: linear-gradient(135deg, #ffffff10 , var(--zyn-background-dark));
+  .zyn-background-app {
+    background: var(--zyn-background-app);
+  }
+
+  --zyn-background-body: radial-gradient(circle at bottom right, #FF00FF25 0%, var(--zyn-background-color) 90%);
+  .zyn-background-body {
+    background: var(--zyn-background-body);
+  }
+
+  --zyn-background: var(--zyn-background-color);
   .zyn-background {
-    background: var(--zyn-background);
+    background: var(--zyn-background-color);
+  }
+
+  --zyn-background-color: #202020;
+  .zyn-background-color {
+    background-color: var(--zyn-background-color);
   }
 
   --zyn-background-dark: var(--zyn-ov-darker-100);
@@ -25,19 +41,19 @@
     background: var(--zyn-background-darkest);
   }
 
-  --zyn-background-light: var(--zyn-ov-brighter-100);
-  .zyn-background-light {
-    background: var(--zyn-background-light);
+  --zyn-background-bright: #ffffff09;
+  .zyn-background-bright {
+    background: var(--zyn-background-bright);
   }
 
-  --zyn-background-lighter: var(--zyn-ov-brighter-200);
-  .zyn-background-lighter {
-    background: var(--zyn-background-lighter);
+  --zyn-background-brighter: #ffffff13;
+  .zyn-background-brighter {
+    background: var(--zyn-background-brighter);
   }
 
-  --zyn-background-lightest: var(--zyn-ov-brighter-300);
-  .zyn-background-lightest {
-    background: var(--zyn-background-lightest);
+  --zyn-background-brightest: var(--zyn-ov-brighter-200);
+  .zyn-background-brightest {
+    background: var(--zyn-background-brightest);
   }
 
 
@@ -296,7 +312,7 @@
   foreground variables & classes
   */
 
-  --zyn-foreground: #f6f6f699;
+  --zyn-foreground: #ffffff99;
   .zyn-foreground {
     color: var(--zyn-foreground);
   }
@@ -334,6 +350,7 @@ body {
     padding: 0 0 0 0.5rem;
     border-radius: var(--zyn-br-sm);
     margin: 0.25rem;
+    display: flex;
 
     i,span {
       margin: 0.25rem 0.5rem 0.25rem 0;
