@@ -14,7 +14,7 @@ Work in progress... No README.md.
 
 ---
 
-## `ALPHA` `v27.0.4`
+## `ALPHA` `v27.0.5`
 
 ---
 
@@ -59,5 +59,7 @@ Work in progress... No README.md.
   - [ ] Download Actions Pause(/Resume) Cancel Retry
   - [ ] See waiting and paused downloads
   - [ ] Download history for session with state display (Canceled/Failed/Finished)
+  - [ ] ...
+- [ ] ...
 
 ---

@@ -28,7 +28,7 @@
       </template>
       <template #end>
         <div class="w-full h-full flex justify-end items-center pr-6" data-tauri-drag-region>
-          ALPHA v27/0.4
+          ALPHA v27/0.5
         </div>
       </template>
     </DesktopTitlebar>
