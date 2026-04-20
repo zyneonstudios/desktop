@@ -45,13 +45,50 @@ jobs:
       - name: install frontend dependencies
         run: npm install
 
-      - uses: tauri-apps/tauri-action@v0
+      - name: Build Tauri App
+        id: tauri_build
+        uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: __VERSION__-${{ github.sha }}
-          releaseName: "Zyneon Desktop automatic __VERSION__"
-          releaseBody: "Build for commit ${{ github.sha }}"
-          releaseDraft: false
-          prerelease: true
           args: ${{ matrix.args }}
+          includeRelease: false
+
+      - name: Rename artifacts
+        shell: bash
+        run: |
+          cd src-tauri/target/release/bundle/
+          
+          find . -type f \( -name "*.deb" -o -name "*.AppImage" -o -name "*.msi" -o -name "*.exe" -o -name "*.rpm" -o -name "*.dmg" \) | while read file; do
+            EXT="${file##*.}"
+            FILENAME=$(basename "$file")
+          
+            if [[ "$FILENAME" == *"aarch64"* ]]; then ARCH="aarch64"; else ARCH="x64"; fi
+          
+            if [[ "$FILENAME" == *".deb"* ]]; then OS="Linux"; TYPE="pkg";
+            elif [[ "$FILENAME" == *".AppImage"* ]]; then OS="Linux"; TYPE="AppImage";
+            elif [[ "$FILENAME" == *".rpm"* ]]; then OS="Linux"; TYPE="rpm";
+            elif [[ "$FILENAME" == *".msi"* ]]; then OS="Windows"; TYPE="msi";
+            elif [[ "$FILENAME" == *".exe"* ]]; then OS="Windows"; TYPE="setup";
+            elif [[ "$FILENAME" == *".dmg"* ]]; then OS="macOS"; TYPE="dmg";
+            fi
+          
+            NEW_NAME="ZyneonDesktop-$OS-$ARCH-$TYPE.$EXT"
+          
+            mv "$file" "../../$NEW_NAME"
+            echo "Renamed $file to $NEW_NAME"
+          done
+
+      - name: Upload
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/heads/main')
+        with:
+          tag_name: auto-${{ github.sha }}
+          name: "Zyneon Desktop automatic Build"
+          body: "Build for commit ${{ github.sha }}"
+          draft: false
+          prerelease: true
+          files: |
+            src-tauri/target/release/ZyneonDesktop-*
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
