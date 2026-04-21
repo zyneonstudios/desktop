@@ -54,11 +54,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: v__VERSION__
-          releaseName: "Automatic push release for v__VERSION__"
-          releaseBody: "Build for commit ${{ github.sha }}"
-          releaseDraft: false
-          prerelease: true
           args: --target ${{ matrix.target }}
 
       - name: Rename and Package Assets
@@ -70,10 +65,10 @@ jobs:
           mkdir -p $FINAL_DIR
 
           if [ "${{ matrix.platform }}" == "windows-latest" ]; then
-            cp "$OUT_DIR/nsis/"*.exe "$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.exe"
+            cp "$OUT_DIR/nsis/"*.exe "$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64_setup.exe"
           
             cd "src-tauri/target/${{ matrix.target }}/release"
-            7z a "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.zip" "zyneon-desktop.exe"
+            7z a "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64_portable.zip" "zyneon-desktop.exe"
             cd ../../../..
           
           elif [ "${{ matrix.platform }}" == "macos-latest" ]; then
@@ -92,6 +87,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.tauri_build.outputs.appVersion }}
+          name: "auto-release for v${{ steps.tauri_build.outputs.appVersion }}"
+          body: "Build for commit ${{ github.sha }}"
           files: dist_assets/*
+          prerelease: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
