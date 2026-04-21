@@ -49,20 +49,18 @@ jobs:
       - name: install frontend dependencies
         run: npm install
 
-      # 1. Build-Schritt (ohne automatisches Release-Upload)
       - uses: tauri-apps/tauri-action@v0
         id: tauri_build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: v__VERSION__ # Schönerer Tag-Name
-          releaseName: "Zyneon Desktop v__VERSION__"
+          tagName: v__VERSION__
+          releaseName: "__VERSION__ (AUTOMATIC BUILD)"
           releaseBody: "Build for commit ${{ github.sha }}"
-          releaseDraft: true # Erst als Draft, damit wir Dateien hinzufügen können
-          prerelease: false
+          releaseDraft: false
+          prerelease: true
           args: --target ${{ matrix.target }}
 
-      # 2. Dateien umbenennen & Packen (Bash für macOS/Linux, PWSH für Windows)
       - name: Rename and Package Assets
         shell: bash
         run: |
@@ -71,28 +69,22 @@ jobs:
           FINAL_DIR="dist_assets"
           mkdir -p $FINAL_DIR
 
-          # Plattform-Mapping für Dateiendungen
           if [ "${{ matrix.platform }}" == "windows-latest" ]; then
-            # EXE (Installer)
-            cp "$OUT_DIR/msi/"*.exe "$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.exe"
-            # Portable ZIP (Die reine .exe aus dem Release-Ordner)
+            cp "$OUT_DIR/nsis/"*.exe "$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.exe"
             cd "src-tauri/target/${{ matrix.target }}/release"
             zip "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.zip" "zyneon-desktop.exe"
             cd ../../../..
           elif [ "${{ matrix.platform }}" == "macos-latest" ]; then
             cp "$OUT_DIR/dmg/"*.dmg "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.dmg"
           else
-            # Linux: DEB, RPM, AppImage
             cp "$OUT_DIR/deb/"*.deb "$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.deb"
             cp "$OUT_DIR/rpm/"*.rpm "$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.rpm"
             cp "$OUT_DIR/appimage/"*.AppImage "$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.AppImage"
-            # Portable TAR.GZ (Die Binary packen)
             cd "src-tauri/target/${{ matrix.target }}/release"
             tar -czvf "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.tar.gz" "zyneon-desktop"
             cd ../../../..
           fi
 
-      # 3. Die sauber benannten Dateien hochladen
       - name: Upload Custom Assets
         uses: softprops/action-gh-release@v2
         with:

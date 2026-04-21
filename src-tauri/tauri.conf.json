@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "Zyneon Desktop",
-  "version": "27.0.7",
+  "version": "27.0.8",
   "identifier": "com.zyneonstudios.desktop",
   "build": {
     "frontendDist": "../dist",
