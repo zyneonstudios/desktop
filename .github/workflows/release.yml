@@ -101,7 +101,7 @@ jobs:
         with:
           tag_name: v${{ steps.tauri_build.outputs.appVersion }}
           name: "v${{ steps.tauri_build.outputs.appVersion }} auto-release"
-          body: "Build for commit ${{ github.sha }}"
+          body: "Build for commit ${{ github.sha }} <br> ${{ github.event.head_commit.message }} <br> <br> THIS RELEASE IS AUTO GENERATED AFTER A PUSH TO THE MAIN BRANCH. IT COULD BE UNSTABLE AND MAY CONTAIN BUGS. ALSO THE BINARIES ARE NOT SIGNED."
           files: dist_assets/*
           # Verhindert Fehler, falls ein Tag bereits existiert
           if_node_exists: replace
