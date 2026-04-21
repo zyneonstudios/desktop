@@ -1,65 +1,101 @@
-# Zyneon Desktop
-Zyneon Desktop is the new generation minecraft management and modding utility by Zyneon Studios. Way more than just a minecraft launcher, Zyneon Desktop offers a wide range of features to enhance your minecraft experience.<br>
-Browse mods, servers, shaderpacks, resourcepacks, modloaders, modpacks and much more! Support for all major minecraft versions and platforms such as CurseForge, Modrinth and well known modloaders.<br>
-Create, manage and play Minecraft instance based on your needs. Easy and intuitive interface for a seamless experience.<br>
-Whether you're a casual player or a hardcore modder, Zyneon Desktop has something for everyone.
+# Zyneon Desktop `v27/0.11 (alpha)`
 
-> **WARNING:**<br>
-> Zyneon Desktop is currently in development and is not ready for use.<br>
-> Expect bugs and missing features. For a stable launcher use the [NEXUS App](https://github.com/nerotvlive/nexus-app), the predecessor of Zyneon Desktop.
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![Status: Alpha](https://img.shields.io/badge/Status-Alpha-orange.svg)](#)
 
----
+**Zyneon Desktop** is an instance-based Minecraft modding utility and launcher featuring a modern, sleek user interface.
 
-Work in progress... No README.md.
+It is the official successor to the [NEXUS App](https://github.com/nerotvlive/nexus-app). As this project is a complete rewrite, we recommend using the NEXUS App for production use while this version is under heavy development.
+
+> [!WARNING]
+> **Early Stage Development:** Zyneon Desktop is currently **not production-ready**. At this moment, it serves primarily for development purposes and demonstrating the new UI concept.
 
 ---
 
-## `ALPHA` `v27.0.10`
+## 📌 Contents
+* [Concept](#concept)
+* [Installation](#installation-and-building)
+  * [Downloads](#downloads)
+  * [Building](#building-from-source-development)
+  * [Contributing](#contributing)
+* [Roadmap](#roadmap)
+* [Contact & Feedback](#contact)
 
 ---
 
-### To-do list for 27.1.0
-- [ ] Finish UI prototype
-  - [ ] Add Dashboard page and basic functionality
-  - [ ] Add Discover page and basic functionality
-  - [ ] Add Search page and basic functionality
-  - [ ] Add Library page and basic functionality
-  - [ ] Add Downloads page and basic functionality
-  - [ ] Add Settings page and basic functionality
-  - [ ] equalize UI across all pages, optimize a bit
-- [ ] Dashboard
-  - [ ] Nice little welcome back/greeting/welcome kinda screen
-  - [ ] Minecraft news
-  - [ ] Zyneon Desktop news, latest update and changelogs
-  - [ ] Last played instances
-  - [ ] Quick links
-  - [ ] Quick access to discover and library
-- [ ] Discover & Search
-  - [ ] Search bar
-  - [ ] Sorting
-  - [ ] Filtering (Categories, modloaders & more...)
-  - [ ] Mods (select or create instance to add)
-  - [ ] Servers (select or create instance to add)
-  - [ ] Shaderpacks (select or create instance to add)
-  - [ ] Resourcepacks (select or create instance to add)
-  - [ ] Modpacks (download as new instance or add to existing)
-  - [ ] Modrinth Support (convert to ZynstanceV3meta)
-  - [ ] CurseForge Support (convert to ZynstanceV3meta)
-- [ ] Library
-  - [ ] Menu with actions (create, overview, ...) and all instances sortable
-  - [ ] Overview with all instances
-  - [ ] Instance view with...
-    - [ ] Play button
-    - [ ] Instance overview (description, gallery & co.)
-    - [ ] Instance settings (fallback to default instance settings (changeable in settings))
-    - [ ] Instance content list (with search-like filtercard and searchbar and sorting) with actions
-    - [ ] Add instance content (preconfigured redirect to search)
-- [ ] Downloads
-  - [ ] See active download(s)
-  - [ ] Download Actions Pause(/Resume) Cancel Retry
-  - [ ] See waiting and paused downloads
-  - [ ] Download history for session with state display (Canceled/Failed/Finished)
-  - [ ] ...
-- [ ] ...
+## Concept
+Zyneon Desktop focuses on performance and modern design. By utilizing **Tauri**, we combine the security and speed of **Rust** with a highly flexible **Vue.js** frontend.
 
 ---
+
+## Installation and Building
+Since there are no official stable releases yet, you can either use automated nightly builds or build the project locally.
+<br> **Warning:** These builds aren't signed yet. Expect your operating system to dislike it.
+
+### Downloads
+Automatically generated builds for macOS (ARM/x64), Linux (x64), and Windows (ARM/x64) can be found here:
+[**View Releases**](https://github.com/zyneonstudios/desktop/releases)
+
+### Building from Source (Development)
+To build Zyneon Desktop locally, you will need the following prerequisites:
+
+| Tool | Version | Link                                                     |
+| :--- | :--- |:---------------------------------------------------------|
+| **Node.js** | `>=24.14.1` | [nodejs.org](https://nodejs.org/)                        |
+| **pnpm** | `>=10.33.0` | [pnpm.io](https://pnpm.io/)                              |
+| **Rust** | `>=1.77.2` | [rust-lang.org](https://www.rust-lang.org/tools/install) |
+| **Tauri v2** | Prereqs | [See here](https://v2.tauri.app/start/prerequisites/)    |
+
+After you installed these, you can clone the repository (or fork it first) to your local machine.<br>
+Open it with RustRover or VSCode (or any other IDE that supports Rust and JavaScript/TypeScript) and run the following commands in the project root folder:
+
+To setup the project:
+```
+pnpm install
+```
+
+To run the application:
+```
+pnpm run tauri dev
+```
+
+To build the application
+```
+pnpm run tauri build
+```
+
+### Contributing
+Contributions of any kind are welcome! We are currently looking for new team members to help build the next generation of modding utilities.
+
+1. Fork the repository.
+3. Open a **Pull Request** or [contact us](#contact) first to coordinate.
+
+---
+
+## Roadmap
+
+### Milestone 1: Basic Structure & UI Prototype
+- [x] Repository setup & CI/CD (GitHub Actions)
+- [x] Tech stack definition (Tauri, Vite, Vue, Tailwind)
+- [x] Custom titlebar & window controls
+- [x] Main menu logic (Sidebar)
+- [ ] **UI Integration of Core Pages:**
+  - [ ] Dashboard (Start + News)
+  - [ ] Discover (+Search)
+  - [ ] Downloads Manager
+  - [ ] Library (Instance Management)
+  - [ ] Settings
+
+### Milestone 2: not defined yet
+- [ ] Expand the Roadmap (wip)
+
+---
+
+## Contact
+Have questions or want to provide feedback?
+
+* **Discord (Support & Community):** [Join our Server](https://discord.gg/hSNSa8Qu4r)
+* **Direct Contact:** `@nerotvlive` (via Discord)
+
+---
+*Zyneon Desktop is an independent project and not affiliated with Mojang AB or Microsoft.*
