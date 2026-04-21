@@ -1,6 +1,6 @@
 # Zyneon Desktop `v27/0.11 (alpha)`
 
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 [![Status: Alpha](https://img.shields.io/badge/Status-Alpha-orange.svg)](#)
 
 **Zyneon Desktop** is an instance-based Minecraft modding utility and launcher featuring a modern, sleek user interface.
