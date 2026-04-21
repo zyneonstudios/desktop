@@ -77,7 +77,6 @@ jobs:
           mkdir -p $FINAL_DIR
 
           if [ "${{ matrix.platform }}" == "windows-latest" ]; then
-            # Windows Handling (x64 oder arm64)
             cp "$OUT_DIR/nsis/"*.exe "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}_setup.exe"
             cd "src-tauri/target/${{ matrix.target }}/release"
             7z a "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}_portable.zip" "zyneon-desktop.exe"
@@ -87,8 +86,8 @@ jobs:
             cp "$OUT_DIR/dmg/"*.dmg "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.dmg"
           
           else
-            # Linux Handling (x64 oder arm64)
             cp "$OUT_DIR/deb/"*.deb "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.deb"
+            cp "$OUT_DIR/rpm/"*.rpm "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.rpm"
             cp "$OUT_DIR/appimage/"*.AppImage "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.AppImage"
           
             cd "src-tauri/target/${{ matrix.target }}/release"
