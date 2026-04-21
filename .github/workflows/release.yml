@@ -22,9 +22,9 @@ jobs:
           - platform: "ubuntu-24.04"
             target: "x86_64-unknown-linux-gnu"
             os_name: "linux-x64"
-          - platform: "ubuntu-24.04"
-            target: "aarch64-unknown-linux-gnu"
-            os_name: "linux-arm64"
+#          - platform: "ubuntu-24.04"
+#            target: "aarch64-unknown-linux-gnu"
+#            os_name: "linux-arm64"
           - platform: "windows-latest"
             target: "x86_64-pc-windows-msvc"
             os_name: "windows-x64"
@@ -99,11 +99,10 @@ jobs:
       - name: Upload Custom Assets
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.tauri_build.outputs.appVersion }}
+          tag_name: ${{ github.sha }}
           name: "v${{ steps.tauri_build.outputs.appVersion }} auto-release"
           body: "Build for commit ${{ github.sha }} <br> ${{ github.event.head_commit.message }} <br> <br> THIS RELEASE IS AUTO GENERATED AFTER A PUSH TO THE MAIN BRANCH. IT COULD BE UNSTABLE AND MAY CONTAIN BUGS. ALSO THE BINARIES ARE NOT SIGNED."
           files: dist_assets/*
-          # Verhindert Fehler, falls ein Tag bereits existiert
           if_node_exists: replace
           prerelease: true
         env:
