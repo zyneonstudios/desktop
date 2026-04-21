@@ -15,7 +15,7 @@ jobs:
         include:
           - platform: "macos-latest"
             target: "aarch64-apple-darwin"
-            os_name: "macos-arm"
+            os_name: "macos-arm64"
           - platform: "macos-latest"
             target: "x86_64-apple-darwin"
             os_name: "macos-x64"
@@ -91,7 +91,7 @@ jobs:
             cp "$OUT_DIR/appimage/"*.AppImage "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.AppImage"
           
             cd "src-tauri/target/${{ matrix.target }}/release"
-            tar -czvf "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.tar.gz" "zyneon-desktop"
+            tar -czvf "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}_portable.tar.gz" "zyneon-desktop"
             cd ../../../..
           fi
 
