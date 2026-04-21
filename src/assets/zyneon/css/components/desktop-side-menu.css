@@ -16,13 +16,13 @@
     }
 
     .center, .bottom {
+        border-bottom: none;
         padding-top: 0.5rem;
         height: fit-content;
     }
 
     .bottom {
         flex-grow: 1;
-        border-bottom: none;
         justify-content: flex-end;
     }
 
@@ -30,7 +30,7 @@
         width: 2rem;
         height: 2rem;
         overflow: hidden;
-        margin: 0 0.5rem 0.5rem 0.5rem;
+        margin: 0 0.5rem 0.5rem 0.433rem;
 
         span {
             display: none;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import '../assets/zyneon/css/components/desktop-titlebar.css';
+  import '../../assets/zyneon/css/components/desktop-titlebar.css';
   import DesktopTitlebarButtons from "./DesktopTitlebarButtons.vue";
   defineProps<{
     title: string

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '../assets/zyneon/css/components/desktop-side-menu.css';
+import '../../assets/zyneon/css/components/desktop-side-menu.css';
 </script>
 
 <template>

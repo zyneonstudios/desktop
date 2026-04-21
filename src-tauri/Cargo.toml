@@ -1,14 +1,12 @@
 [package]
 name = "zyneon_desktop"
-version = "27.0.5"
+version = "27.0.6"
 description = "Zyneon Desktop App"
 authors = ["Zyneon Apex", "Zyneon Studios", "Zyneon", "nerotvlive"]
 license = "GPL-3"
 repository = "https://github.com/zyneonstudios/zyneon-desktop"
 edition = "2021"
 rust-version = "1.77.2"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]
 name = "zyneon_desktop_lib"
@@ -24,3 +22,4 @@ log = "0.4"
 tauri = { version = "2.10.3", features = [] }
 tauri-plugin-log = "2"
 reqwest = { version = "0.13.2", features = ["json"] }
+tauri-plugin-single-instance = "2.4.1"

@@ -367,8 +367,15 @@ body {
     outline: none; /*revisit*/
   }
 
-  .zyn-btn:active, .button:active, .btn:active {
+  .zyn-btn.active, .button.active, .btn.active {
+    background: var(--zyn-ov-brighter-300);
+    cursor: default;
+  }
 
+  .zyn-btn:disabled, .button:disabled, .btn:disabled {
+    background: transparent;
+    cursor: not-allowed;
+    opacity: 0.5;
   }
 }
 
