@@ -49,7 +49,7 @@
             <div class="absolute top-0 right-0 h-full w-full" data-tauri-drag-region></div>
             <div style="z-index: -1" class="flex gap-2 items-center">
               <BadgeElement background="var(--color-red-300)" >
-                <strong class="text-red-900">v27/0.11 (alpha)</strong>
+                <strong class="text-red-900">v27/0.10 (alpha)</strong>
               </BadgeElement>
             </div>
           </div>
