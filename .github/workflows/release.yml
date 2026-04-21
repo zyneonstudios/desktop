@@ -55,7 +55,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: v__VERSION__
-          releaseName: "__VERSION__ (AUTOMATIC BUILD)"
+          releaseName: "Automatic push release for v__VERSION__"
           releaseBody: "Build for commit ${{ github.sha }}"
           releaseDraft: false
           prerelease: true
@@ -71,15 +71,18 @@ jobs:
 
           if [ "${{ matrix.platform }}" == "windows-latest" ]; then
             cp "$OUT_DIR/nsis/"*.exe "$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.exe"
+          
             cd "src-tauri/target/${{ matrix.target }}/release"
-            zip "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.zip" "zyneon-desktop.exe"
+            7z a "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-windows-x64.zip" "zyneon-desktop.exe"
             cd ../../../..
+          
           elif [ "${{ matrix.platform }}" == "macos-latest" ]; then
             cp "$OUT_DIR/dmg/"*.dmg "$FINAL_DIR/Zyneon-Desktop_$VERSION-${{ matrix.os_name }}.dmg"
+          
           else
             cp "$OUT_DIR/deb/"*.deb "$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.deb"
-            cp "$OUT_DIR/rpm/"*.rpm "$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.rpm"
             cp "$OUT_DIR/appimage/"*.AppImage "$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.AppImage"
+          
             cd "src-tauri/target/${{ matrix.target }}/release"
             tar -czvf "../../../../$FINAL_DIR/Zyneon-Desktop_$VERSION-linux-x64.tar.gz" "zyneon-desktop"
             cd ../../../..
