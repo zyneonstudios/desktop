@@ -37,14 +37,18 @@ Automatically generated builds for macOS (ARM/x64), Linux (x64), and Windows (AR
 [**View Releases**](https://github.com/zyneonstudios/desktop/releases)
 
 ### Building from Source (Development)
+
+> [!WARNING]
+> **Read carefully** and make **absolutely sure** that you follow the steps **in the order given here!**
+
 To build Zyneon Desktop locally, you will need the following prerequisites:
 
-| Tool                | Version | Link                                                     |
-|:--------------------| :--- |:---------------------------------------------------------|
-| **FIRST: Tauri v2** | Prereqs | [See here](https://v2.tauri.app/start/prerequisites/)    |
-| **Node.js**         | `>=24.14.1` | [nodejs.org](https://nodejs.org/)                        |
-| **pnpm**            | `>=10.33.0` | [pnpm.io](https://pnpm.io/)                              |
-| **Rust**            | `>=1.77.2` | [rust-lang.org](https://www.rust-lang.org/tools/install) |
+| Tool                | Version                                                | Link                                                     |
+|:--------------------|:-------------------------------------------------------|:---------------------------------------------------------|
+| **FIRST: Tauri v2** | **Read carefully**<br>Search for your operating system | [See here](https://v2.tauri.app/start/prerequisites/)    |
+| **Node.js**         | `>=24.14.1`                                            | [nodejs.org](https://nodejs.org/)                        |
+| **pnpm**            | `>=10.33.0`                                            | [pnpm.io](https://pnpm.io/)                              |
+| **Rust**            | `>=1.77.2`                                             | [rust-lang.org](https://www.rust-lang.org/tools/install) |
 
 After you installed these, you can clone the repository (or fork it first) to your local machine.<br>
 Open it with RustRover or VSCode (or any other IDE that supports Rust and JavaScript/TypeScript) and run the following commands in the project root folder:
