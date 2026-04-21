@@ -1,7 +1,7 @@
 {
   "name": "zyneon-desktop",
   "private": true,
-  "version": "27.0.11",
+  "version": "27.0.10",
   "type": "module",
   "scripts": {
     "dev": "vite",
