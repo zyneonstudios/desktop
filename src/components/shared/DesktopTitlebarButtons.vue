@@ -6,8 +6,8 @@
 
 <template>
   <div class="titlebar-buttons flex w-fit absolute right-0 top-0">
-    <button type="button" @click="WindowControls.minimize()"><i class="bi bi-dash-lg"></i></button>
-    <button type="button" @click="WindowControls.toggleMaximize()" class="smaller"><i class="bi bi-square"></i></button>
-    <button type="button" @click="WindowControls.close()" class="red"><i class="bi bi-x-lg"></i></button>
+    <button type="button" @click="WindowControls.minimize()"><i class="icon-minus"></i></button>
+    <button type="button" @click="WindowControls.toggleMaximize()" class="smaller"><i class="icon-square"></i></button>
+    <button type="button" @click="WindowControls.close()" class="red"><i class="icon-x"></i></button>
   </div>
 </template>

@@ -59,7 +59,7 @@ jobs:
           fi
 
       - name: install frontend dependencies
-        run: npm install
+        run: pnpm install
 
       - uses: tauri-apps/tauri-action@v0
         id: tauri_build

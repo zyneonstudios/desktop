@@ -69,17 +69,17 @@
        <DesktopSideMenu id="navigation" class="zyneon-desktop-side-menu">
          <template #top>
            <button class="btn" onclick="this.parentElement.parentElement.classList.toggle('active')">
-             <i class="bi bi-list"></i>
+             <i class="icon-text-align-justify"></i>
              <span>Toggle menu</span>
            </button>
          </template>
          <template #center>
            <button id="dashboard-button" class="btn active" @click="showPage('dashboard')">
-             <i class="bi bi-grid-fill"></i>
+             <i class="icon-gallery-vertical-end"></i>
              <span>Dashboard</span>
            </button>
            <button id="discover-button" class="btn" @click="showPage('discover')">
-             <i class="bi bi-globe-europe-africa"></i>
+             <i class="icon-search"></i>
              <span>Discover</span>
            </button>
            <button id="library-button" class="btn" @click="showPage('library')">
@@ -89,20 +89,20 @@
          </template>
          <template #bottom>
            <button class="btn hover:background-color-blue-400" onclick="window.location.reload();">
-             <i class="bi bi-arrow-clockwise"></i>
+             <i class="icon-rotate-cw"></i>
              <span>Reload (F5/CTRL + R)</span>
            </button>
            <button class="btn" disabled>
-             <i class="bi bi-bell"></i>
+             <i class="icon-bell"></i>
              <span>Notifications</span>
            </button>
            <hr class="opacity-20 mb-2">
            <button id="downloads-button" class="btn" @click="showPage('downloads')">
-             <i class="bi bi-download"></i>
+             <i class="icon-download"></i>
              <span>Downloads</span>
            </button>
            <button id="settings-button" class="btn" @click="showPage('settings')">
-             <i class="bi bi-gear"></i>
+             <i class="icon-bolt"></i>
              <span>Settings</span>
            </button>
          </template>
