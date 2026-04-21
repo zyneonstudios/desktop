@@ -1,4 +1,4 @@
-# Zyneon Desktop `v27/0.10 (alpha)`
+# Zyneon Desktop `v27/0.11 (alpha)`
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 [![Status: Alpha](https://img.shields.io/badge/Status-Alpha-orange.svg)](#)
