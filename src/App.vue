@@ -65,15 +65,15 @@
       </template>
     </DesktopTitlebar>
     <DesktopRootView class="zyneon-desktop-view">
-      <template #left>
-       <DesktopSideMenu id="navigation" class="zyneon-desktop-side-menu">
-         <template #top>
+      <template #left data-tauri-drag-region>
+       <DesktopSideMenu id="navigation" class="zyneon-desktop-side-menu" data-tauri-drag-region>
+         <template #top data-tauri-drag-region>
            <button class="btn" onclick="this.parentElement.parentElement.classList.toggle('active')">
              <i class="icon-text-align-justify"></i>
              <span>Toggle menu</span>
            </button>
          </template>
-         <template #center>
+         <template #center data-tauri-drag-region>
            <button id="dashboard-button" class="btn active" @click="showPage('dashboard')">
              <i class="icon-gallery-vertical-end"></i>
              <span>Dashboard</span>
@@ -87,7 +87,7 @@
              <span>Library</span>
            </button>
          </template>
-         <template #bottom>
+         <template #bottom data-tauri-drag-region>
            <button class="btn hover:background-color-blue-400" onclick="window.location.reload();">
              <i class="icon-rotate-cw"></i>
              <span>Reload (F5/CTRL + R)</span>

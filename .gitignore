@@ -24,3 +24,7 @@ dist-ssr
 /.vscode/
 
 /init.bat
+
+# Added by cargo
+
+/target
