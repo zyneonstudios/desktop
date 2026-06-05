@@ -1,4 +1,4 @@
-# Zyneon Desktop `v27/0.10 (alpha)`
+# Zyneon Desktop `v27/0.11 (alpha)`
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 [![Status: Alpha](https://img.shields.io/badge/Status-Alpha-orange.svg)](#)
@@ -46,9 +46,9 @@ To build Zyneon Desktop locally, you will need the following prerequisites:
 | Tool                | Version                                                | Link                                                     |
 |:--------------------|:-------------------------------------------------------|:---------------------------------------------------------|
 | **FIRST: Tauri v2** | **Read carefully**<br>Search for your operating system | [See here](https://v2.tauri.app/start/prerequisites/)    |
-| **Node.js**         | `>=24.14.1`                                            | [nodejs.org](https://nodejs.org/)                        |
-| **pnpm**            | `>=10.33.0`                                            | [pnpm.io](https://pnpm.io/)                              |
-| **Rust**            | `>=1.77.2`                                             | [rust-lang.org](https://www.rust-lang.org/tools/install) |
+| **Node.js**         | `>=26.2.0`                                             | [nodejs.org](https://nodejs.org/)                        |
+| **pnpm**            | `>=11.5.1`                                             | [pnpm.io](https://pnpm.io/)                              |
+| **Rust**            | `>=1.96.0`                                             | [rust-lang.org](https://www.rust-lang.org/tools/install) |
 
 > [!WARNING]
 > **(RE)start your IDE. If the commands (pnpm, node) are not available, make shure you've installed them and restart your IDE or restart your system!**
