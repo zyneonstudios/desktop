@@ -1,7 +1,10 @@
-# Zyneon Desktop `v27/0.11 (alpha)`
+# Zyneon Desktop [![v27/0.11: Alpha](https://img.shields.io/badge/v27/0.11-Alpha-orange.svg)](#) [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
-[![Status: Alpha](https://img.shields.io/badge/Status-Alpha-orange.svg)](#)
+[![NodeJS](https://img.shields.io/badge/nodejs-26.2.0-green?style=for-the-badge)](https://nodejs.org/en/download)
+[![PNPM Package Manager](https://img.shields.io/badge/pnpm-11.5.1-blue?style=for-the-badge)](https://pnpm.io/installation)
+[![TailwindCSS](https://img.shields.io/badge/Rust-1.69.0-yellow?style=for-the-badge)](https://www.rust-lang.org/tools/install)
+
+
 
 **Zyneon Desktop** is an instance-based Minecraft modding utility and launcher featuring a modern, sleek user interface.
 
