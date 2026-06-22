@@ -343,6 +343,12 @@ body {
   background: var(--zyn-background);
   color: var(--zyn-foreground);
   user-select: none;
+  -webkit-user-select: none;
+
+  * {
+    user-select: none;
+    -webkit-user-select: none;
+  }
 
   .zyn-btn, .button, .btn {
     text-align: start;
