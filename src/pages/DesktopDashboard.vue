@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import '../assets/zyneon/css/dashboard.css';
-import CardElement from "../components/shared/desktopelements/CardElement.vue";
+import StructuredCardElement from "../components/shared/desktopelements/StructuredCardElement.vue";
 import { Opener } from "../assets/zyneon/script/opener.ts"
 </script>
 
@@ -9,7 +9,7 @@ import { Opener } from "../assets/zyneon/script/opener.ts"
     <h1 class="text-2xl font-bold">Dashboard</h1>
 
     <div @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop')">
-      <CardElement class="bg-red-900 opacity-65 hover:opacity-100 transition-all cursor-pointer text-white mt-2" border="1px solid var(--zyn-ov-brighter-200)">
+      <StructuredCardElement class="bg-red-900 opacity-65 hover:opacity-100 transition-all cursor-pointer text-white mt-2" border="1px solid var(--zyn-ov-brighter-200)">
         <template #content>
           <p>
             <strong>
@@ -21,7 +21,7 @@ import { Opener } from "../assets/zyneon/script/opener.ts"
             <strong>Just click on this card to open the GitHub page.</strong>
           </p>
         </template>
-      </CardElement>
+      </StructuredCardElement>
     </div>
 
   </div>

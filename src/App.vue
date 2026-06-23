@@ -12,6 +12,7 @@
   import { WindowControls } from "./assets/zyneon/script/windowControls.ts"
   import BadgeElement from "./components/shared/desktopelements/BadgeElement.vue";
   import CommandBarElement from "./components/shared/desktopelements/CommandBarElement.vue";
+  import DynamicPanelElement from "./components/shared/desktopelements/DynamicPanelElement.vue";
 
   function showPage(page: string) {
     document.getElementById("dashboard")?.classList.remove("active");
@@ -119,6 +120,7 @@
         </DesktopPane>
       </template>
     </DesktopRootView>
+    <DynamicPanelElement />
   </div>
 </template>
 
