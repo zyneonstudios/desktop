@@ -10,7 +10,7 @@ import Card from "../components/shared/desktopelements/Card.vue";
   <div class="w-full h-full p-3">
     <SpacerHorizontalTitled title="Important" />
     <div class="flex gap-3 pb-3">
-      <CardStructured @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop/issues/new')" class="bg-red-900 w-full opacity-65 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop/issues/new')" class="bg-red-900 w-full opacity-75 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <strong>
             Warning <i class="icon-message-square-warning absolute pl-1"></i>

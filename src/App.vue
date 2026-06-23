@@ -13,6 +13,8 @@
   import Badge from "./components/shared/desktopelements/Badge.vue";
   import InputBarCommand from "./components/shared/desktopelements/InputBarCommand.vue";
   import CardDynamicPanel from "./components/shared/desktopelements/CardDynamicPanel.vue";
+  import { onMounted } from 'vue'
+  import {ZyneonSettings} from "./assets/zyneon/script/settings.ts";
 
   function showPage(page: string) {
     document.getElementById("dashboard")?.classList.remove("active");
@@ -39,6 +41,12 @@
   document.addEventListener('contextmenu', (e) => {
     e.preventDefault()
   })
+
+  onMounted(() => {
+    ZyneonSettings.setCommandbar(ZyneonSettings.useCommandbar);
+    ZyneonSettings.setDynamicPanel(ZyneonSettings.useDynamicPanel);
+    ZyneonSettings.setBackgroundAccent(ZyneonSettings.getBackgroundAccent());
+  })
 </script>
 
 <template>
@@ -49,7 +57,7 @@
           <img alt="" class="z-n1 h-4 ml-3" src="./assets/zyneon/img/zyneon-desktop-title.png" data-tauri-drag-region>
           <div class="relative z-1">
             <div class="flex gap-2 items-center">
-              <InputBarCommand />
+              <InputBarCommand class="hidden" id="command-bar" />
             </div>
           </div>
         </div>
@@ -120,7 +128,7 @@
         </DesktopPane>
       </template>
     </DesktopRootView>
-    <CardDynamicPanel />
+    <CardDynamicPanel class="hidden" id="dynamic-panel"/>
   </div>
 </template>
 
