@@ -1,10 +1,13 @@
 # Third-Party Notices
 
-This directory lists third-party packages used by Zyneon Desktop.
+This file lists third-party packages used by Zyneon Desktop.
 
 For exact resolved versions, refer to `pnpm-lock.yaml`.
 Package names below are listed from `package.json` and should be kept in sync
 with the dependency manifest.
+
+This file is an inventory only. Each dependency remains governed by its own
+license text, notice requirements, and copyright terms.
 
 ## Runtime dependencies
 

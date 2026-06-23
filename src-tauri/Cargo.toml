@@ -3,8 +3,8 @@ name = "zyneon-desktop"
 version = "27.0.12"
 description = "Zyneon Desktop App"
 authors = ["Zyneon Apex", "Zyneon Studios", "Zyneon", "nerotvlive"]
-license = "GPL-3"
-repository = "https://github.com/zyneonstudios/zyneon-desktop"
+license = "AGPL-3.0-only"
+repository = "https://github.com/zyneonstudios/desktop"
 edition = "2021"
 rust-version = "1.77.2"
 

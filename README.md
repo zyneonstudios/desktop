@@ -1,8 +1,8 @@
-# Zyneon Desktop [![v27/0.12: Alpha](https://img.shields.io/badge/v27/0.12-Alpha-orange.svg)](#) [![AGPLv3 License](https://img.shields.io/badge/License-AGPL%203-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
+# Zyneon Desktop [![v27/0.12: Alpha](https://img.shields.io/badge/v27/0.12-Alpha-orange.svg)](#) [![AGPL 3.0 License](https://img.shields.io/badge/License-AGPL%203.0-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 
-[![NodeJS](https://img.shields.io/badge/nodejs-26.2.0-green?style=for-the-badge)](https://nodejs.org/en/download)
-[![PNPM](https://img.shields.io/badge/pnpm-11.5.1-blue?style=for-the-badge)](https://pnpm.io/installation)
-[![Rust](https://img.shields.io/badge/Rust-1.69.0-yellow?style=for-the-badge)](https://www.rust-lang.org/tools/install)
+[![NodeJS](https://img.shields.io/badge/Node.js-required-green?style=for-the-badge)](https://nodejs.org/en/download)
+[![PNPM](https://img.shields.io/badge/pnpm-10.33.0-blue?style=for-the-badge)](https://pnpm.io/installation)
+[![Rust](https://img.shields.io/badge/Rust-1.77.2-yellow?style=for-the-badge)](https://www.rust-lang.org/tools/install)
 
 
 
@@ -48,13 +48,13 @@ To build Zyneon Desktop locally, you will need the following prerequisites:
 
 | Tool                | Version                                                | Link                                                     |
 |:--------------------|:-------------------------------------------------------|:---------------------------------------------------------|
-| **FIRST: Tauri v2** | **Read carefully**<br>Search for your operating system | [See here](https://v2.tauri.app/start/prerequisites/)    |
-| **Node.js**         | `>=26.2.0`                                             | [nodejs.org](https://nodejs.org/)                        |
-| **pnpm**            | `>=11.5.1`                                             | [pnpm.io](https://pnpm.io/)                              |
-| **Rust**            | `>=1.96.0`                                             | [rust-lang.org](https://www.rust-lang.org/tools/install) |
+| **Tauri v2**        | Follow the platform-specific prerequisites            | [See here](https://v2.tauri.app/start/prerequisites/)    |
+| **Node.js**         | Use the version required by Tauri v2                  | [nodejs.org](https://nodejs.org/)                        |
+| **pnpm**            | `>=10.33.0`                                            | [pnpm.io](https://pnpm.io/)                              |
+| **Rust**            | `>=1.77.2`                                             | [rust-lang.org](https://www.rust-lang.org/tools/install) |
 
 > [!WARNING]
-> **(RE)start your IDE. If the commands (pnpm, node) are not available, make shure you've installed them and restart your IDE or restart your system!**
+> **(RE)start your IDE. If the commands (pnpm, node) are not available, make sure you've installed them and restart your IDE or restart your system!**
 
 After you installed these, you can clone the repository (or fork it first) to your local machine.<br>
 Open it with RustRover or VSCode (or any other IDE that supports Rust and JavaScript/TypeScript) and run the following commands in the project root folder:
@@ -69,7 +69,7 @@ To run the application:
 pnpm run tauri dev
 ```
 
-To build the application
+To build the application:
 ```
 pnpm run tauri build
 ```
@@ -78,7 +78,7 @@ pnpm run tauri build
 Contributions of any kind are welcome! We are currently looking for new team members to help build the next generation of modding utilities.
 
 1. Fork the repository.
-3. Open a **Pull Request** or [contact us](#contact) first to coordinate.
+2. Open a **Pull Request** or [contact us](#contact) first to coordinate.
 
 ---
 
@@ -94,7 +94,7 @@ Third-party packages and dependency notices are listed in [THIRD_PARTY_NOTICES.m
 ## Contact
 Have questions or want to provide feedback?
 
-* A Discord server is the works. Coming soon.
+* A Discord server is in the works. Coming soon.
 * **Direct Contact:** `@nerotvlive` (via Discord)
 
 ---
