@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-<div class="card zyn-br-md shadow-lg backdrop-blur-lg" :style="{background: background, border: border}">
+  <div class="card zyn-br-md shadow-lg backdrop-blur-lg" :style="{background: background, border: border}">
     <DesktopElement>
       <slot></slot>
     </DesktopElement>

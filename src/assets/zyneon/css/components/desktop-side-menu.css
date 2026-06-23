@@ -45,7 +45,7 @@
     width: 20rem;
 
     button {
-        width: 15rem;
+        width: calc(100% - 1rem);
 
         span {
             display: inline;

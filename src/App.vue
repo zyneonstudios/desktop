@@ -10,9 +10,9 @@
   import DesktopSearch from "./pages/DesktopSearch.vue";
   import DesktopSettings from "./pages/DesktopSettings.vue";
   import { WindowControls } from "./assets/zyneon/script/windowControls.ts"
-  import BadgeElement from "./components/shared/desktopelements/BadgeElement.vue";
-  import CommandBarElement from "./components/shared/desktopelements/CommandBarElement.vue";
-  import DynamicPanelElement from "./components/shared/desktopelements/DynamicPanelElement.vue";
+  import Badge from "./components/shared/desktopelements/Badge.vue";
+  import InputBarCommand from "./components/shared/desktopelements/InputBarCommand.vue";
+  import CardDynamicPanel from "./components/shared/desktopelements/CardDynamicPanel.vue";
 
   function showPage(page: string) {
     document.getElementById("dashboard")?.classList.remove("active");
@@ -49,7 +49,7 @@
           <img alt="" class="z-n1 h-4 ml-3" src="./assets/zyneon/img/zyneon-desktop-title.png" data-tauri-drag-region>
           <div class="relative z-1">
             <div class="flex gap-2 items-center">
-              <CommandBarElement />
+              <InputBarCommand />
             </div>
           </div>
         </div>
@@ -59,9 +59,9 @@
       </template>
       <template #end>
         <div class="w-full h-full gap-2 flex justify-end items-center pr-6" data-tauri-drag-region>
-          <BadgeElement background="var(--color-red-300)" data-tauri-drag-region>
+          <Badge background="var(--color-red-300)" data-tauri-drag-region>
             <strong data-tauri-drag-region class="text-red-900">v27/0.12 (alpha)</strong>
-          </BadgeElement>
+          </Badge>
         </div>
       </template>
     </DesktopTitlebar>
@@ -120,7 +120,7 @@
         </DesktopPane>
       </template>
     </DesktopRootView>
-    <DynamicPanelElement />
+    <CardDynamicPanel />
   </div>
 </template>
 

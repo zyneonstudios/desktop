@@ -350,11 +350,6 @@ body {
     -webkit-user-select: none;
   }
 
-  hr {
-    opacity: 0.6;
-    color: var(--zyn-ov-brighter-400);
-  }
-
   .zyn-btn, .button, .btn {
     text-align: start;
     padding: 0 0 0 0.5rem;

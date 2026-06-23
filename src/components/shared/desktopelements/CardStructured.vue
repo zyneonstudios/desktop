@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import '../../../assets/zyneon/css/components/desktop-element-card-structured.css';
-import CardElement from "./CardElement.vue";
+import Card from "./Card.vue";
 defineProps<{
   background?: string
   border?: string
@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <CardElement :background="background" :border="border">
+  <Card :background="background" :border="border">
     <div class="structured-card flex flex-col h-full">
       <div class="header px-3 pt-2">
         <slot name="header"></slot>
@@ -20,5 +20,5 @@ defineProps<{
         <slot name="footer"></slot>
       </div>
     </div>
-  </CardElement>
+  </Card>
 </template>

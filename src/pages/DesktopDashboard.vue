@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import '../assets/zyneon/css/dashboard.css';
-import StructuredCardElement from "../components/shared/desktopelements/StructuredCardElement.vue";
+import CardStructured from "../components/shared/desktopelements/CardStructured.vue";
 import { Opener } from "../assets/zyneon/script/opener.ts"
+import SpacerHorizontalTitled from "../components/shared/desktopelements/SpacerHorizontalTitled.vue";
+import Card from "../components/shared/desktopelements/Card.vue";
 </script>
 
 <template>
   <div class="w-full h-full p-3">
+    <SpacerHorizontalTitled title="Important" />
     <div class="flex gap-3 pb-3">
-      <StructuredCardElement @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop')" class="bg-red-900 w-full opacity-65 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop/issues/new')" class="bg-red-900 w-full opacity-65 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <strong>
             Warning <i class="icon-message-square-warning absolute pl-1"></i>
@@ -20,10 +23,10 @@ import { Opener } from "../assets/zyneon/script/opener.ts"
           </p>
         </template>
         <template #footer>
-          <strong>Just click on this card to open the GitHub page.</strong>
+          <strong>Just click here to report an issue on GitHub</strong>
         </template>
-      </StructuredCardElement>
-      <StructuredCardElement @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop')" class="bg-blue-900 w-full opacity-65 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      </CardStructured>
+      <CardStructured class="bg-blue-900 w-full opacity-65 text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <strong>
             Note <i class="icon-info absolute pl-1"></i>
@@ -36,11 +39,17 @@ import { Opener } from "../assets/zyneon/script/opener.ts"
           </p>
         </template>
         <template #footer>
-          <strong>@nerotvlive</strong><span class="pl-1">- Or click to open the GitHub page.</span>
+          <strong>@nerotvlive</strong>
         </template>
-      </StructuredCardElement>
+      </CardStructured>
     </div>
-    <hr>
-
+    <SpacerHorizontalTitled title="Changelogs" />
+    <div class="pb-3">
+      <Card @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop/commits/main/')" border="1px solid var(--zyn-ov-brighter-200)" class="opacity-65 hover:opacity-100 transition-all cursor-pointer bg-yellow-600 w-fit py-1 px-2 text-white">(Work in progress) See GitHub commit history for now</Card>
+    </div>
+    <SpacerHorizontalTitled title="Roadmap (prog%)" />
+    <div class="pb-3">
+      <Card @click="Opener.openWithDefault('https://github.com/zyneonstudios/desktop#roadmap')" border="1px solid var(--zyn-ov-brighter-200)" class="opacity-65 hover:opacity-100 transition-all cursor-pointer bg-yellow-600 w-fit py-1 px-2 text-white">(Work in progress) See GitHub repo's README.md for now</Card>
+    </div>
   </div>
 </template>
