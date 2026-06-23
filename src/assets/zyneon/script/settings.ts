@@ -9,6 +9,7 @@ export class settings {
     private language = "en";
 
     constructor() {
+        this.fixWebkit();
         if(localStorage.getItem("useCommandbar") === "false") {
             this.commandbar = false;
         }
@@ -22,6 +23,13 @@ export class settings {
         const savedBgAccentOpacity = localStorage.getItem("backgroundAccentOpacity");
         if (savedBgAccentOpacity !== null) {
             this.backgroundAccentOpacity = parseFloat(savedBgAccentOpacity) || 0.25;
+        }
+    }
+
+    private fixWebkit() {
+        const isWebKit = navigator.userAgent.includes("WebKit") && !navigator.userAgent.includes("Chrome") && !navigator.userAgent.includes("Chromium");
+        if (isWebKit) {
+            document.documentElement.style.setProperty("--zyn-background-app", "#ffffff10");
         }
     }
 
