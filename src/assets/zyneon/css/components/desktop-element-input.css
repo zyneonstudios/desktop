@@ -1,6 +1,6 @@
 .input-element {
     input {
-        padding: 0.2rem 00.4rem !important;
+        padding: 0.2rem 00.4rem;
     }
 
     input:focus {

@@ -3,7 +3,7 @@ import '../../assets/zyneon/css/components/desktop-side-menu.css';
 </script>
 
 <template>
-  <div class="desktop-side-menu" data-tauri-drag-region>
+  <div class="side-menu" data-tauri-drag-region>
 
     <div class="top" data-tauri-drag-region>
       <slot name="top" data-tauri-drag-region>

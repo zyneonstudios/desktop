@@ -9,14 +9,16 @@ defineProps<{
 
 <template>
   <CardElement :background="background" :border="border">
-    <div class="header px-3 pt-1">
-      <slot name="header"></slot>
-    </div>
-    <div class="content px-3 py-2">
-      <slot name="content"></slot>
-    </div>
-    <div class="footer px-3 pb-2">
-      <slot name="footer"></slot>
+    <div class="structured-card flex flex-col h-full">
+      <div class="header px-3 pt-2">
+        <slot name="header"></slot>
+      </div>
+      <div class="content px-3 py-2">
+        <slot name="content"></slot>
+      </div>
+      <div class="footer mt-auto px-3 pb-2 pt-2 flex">
+        <slot name="footer"></slot>
+      </div>
     </div>
   </CardElement>
 </template>

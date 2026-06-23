@@ -1,4 +1,4 @@
-# Zyneon Desktop [![v27/0.11: Alpha](https://img.shields.io/badge/v27/0.11-Alpha-orange.svg)](#) [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
+# Zyneon Desktop [![v27/0.12: Alpha](https://img.shields.io/badge/v27/0.12-Alpha-orange.svg)](#) [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 
 [![NodeJS](https://img.shields.io/badge/nodejs-26.2.0-green?style=for-the-badge)](https://nodejs.org/en/download)
 [![PNPM](https://img.shields.io/badge/pnpm-11.5.1-blue?style=for-the-badge)](https://pnpm.io/installation)

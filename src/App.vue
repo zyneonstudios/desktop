@@ -60,14 +60,14 @@
       <template #end>
         <div class="w-full h-full gap-2 flex justify-end items-center pr-6" data-tauri-drag-region>
           <BadgeElement background="var(--color-red-300)" data-tauri-drag-region>
-            <strong data-tauri-drag-region class="text-red-900">v27/0.11 (alpha)</strong>
+            <strong data-tauri-drag-region class="text-red-900">v27/0.12 (alpha)</strong>
           </BadgeElement>
         </div>
       </template>
     </DesktopTitlebar>
     <DesktopRootView class="zyneon-desktop-view">
       <template #left data-tauri-drag-region>
-       <DesktopSideMenu id="navigation" class="zyneon-desktop-side-menu" data-tauri-drag-region>
+       <DesktopSideMenu id="navigation" class="desktop-side-menu" data-tauri-drag-region>
          <template #top data-tauri-drag-region>
            <button class="btn" onclick="this.parentElement.parentElement.classList.toggle('active')">
              <i class="icon-text-align-justify"></i>

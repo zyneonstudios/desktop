@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import '../../../assets/zyneon/css/components/desktop-element-badge.css';
 import DesktopElement from "./DesktopElement.vue";
 defineProps<{
   background: string

@@ -1,4 +1,4 @@
-.desktop-side-menu {
+.side-menu {
     display: flex;
     flex-direction: column;
     transition: var(--zyn-transition);
@@ -41,7 +41,7 @@
     }
 }
 
-.desktop-side-menu.active {
+.side-menu.active {
     width: 20rem;
 
     button {

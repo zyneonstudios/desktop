@@ -6207,7 +6207,7 @@ dependencies = [
 
 [[package]]
 name = "zyneon-desktop"
-version = "27.0.11"
+version = "27.0.12"
 dependencies = [
  "log",
  "reqwest",

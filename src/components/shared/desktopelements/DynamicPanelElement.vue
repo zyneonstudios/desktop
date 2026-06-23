@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import '../../../assets/zyneon/css/components/desktop-element-dynamic-panel.css';
+import '../../../assets/zyneon/css/components/desktop-element-card-dynamicpanel.css';
 import CardElement from "./CardElement.vue";
 </script>
 
