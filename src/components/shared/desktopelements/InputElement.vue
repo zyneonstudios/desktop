@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import DesktopElement from "./DesktopElement.vue";
 import '../../../assets/zyneon/css/components/desktop-element-input.css';
+import DesktopElement from "./DesktopElement.vue";
 defineProps<{
   background: string
   placeholder?: string

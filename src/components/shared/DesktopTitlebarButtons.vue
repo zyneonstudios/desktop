@@ -5,9 +5,9 @@
 </script>
 
 <template>
-  <div class="titlebar-buttons flex w-fit absolute right-0 top-0">
-    <button type="button" @click="WindowControls.minimize()"><i class="icon-minus"></i></button>
-    <button type="button" @click="WindowControls.toggleMaximize()" class="smaller"><i class="icon-square"></i></button>
-    <button type="button" @click="WindowControls.close()" class="red"><i class="icon-x"></i></button>
+  <div class="titlebar-buttons flex w-fit absolute right-0 top-0" id="titlebar-buttons">
+    <button type="button" @click="WindowControls.minimize()" id="titlebar-button-minimize"><i class="icon-minus"></i></button>
+    <button type="button" @click="WindowControls.toggleMaximize()" class="smaller" id="titlebar-button-maximize"><i class="icon-square"></i></button>
+    <button type="button" @click="WindowControls.close()" class="red" id="titlebar-button-close"><i class="icon-x"></i></button>
   </div>
 </template>

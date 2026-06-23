@@ -20,7 +20,16 @@ export class windowControls {
     }
 
     async toggleMaximize(): Promise<void> {
-        await this.appWindow.toggleMaximize();
+        await this.appWindow.toggleMaximize()
+        /*if(document.getElementById("titlebar-button-maximize")) { TODO implement this behavior to its events ((un)maximize), and not the button
+            if(await this.appWindow.isMaximized()) {
+                // @ts-ignore
+                document.getElementById("titlebar-button-maximize").innerHTML = "<i class='icon-squares-exclude'></i>";
+            } else {
+                // @ts-ignore
+                document.getElementById("titlebar-button-maximize").innerHTML = "<i class='icon-square'></i>";
+            }
+        }*/
     }
 
     async enableFullscreen(): Promise<void> {
