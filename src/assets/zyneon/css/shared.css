@@ -350,6 +350,11 @@ body {
     -webkit-user-select: none;
   }
 
+  #command-bar {
+    position: absolute;
+    top: -0.85rem;
+  }
+
   .zyn-btn, .button, .btn {
     text-align: start;
     padding: 0 0 0 0.5rem;
