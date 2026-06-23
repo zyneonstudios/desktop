@@ -10,7 +10,6 @@ export class settings {
     private language = "en";
 
     constructor() {
-        this.fixWebkit();
         if(localStorage.getItem("useCommandbar") === "false") {
             this.commandbar = false;
         }
@@ -33,13 +32,6 @@ export class settings {
             } else {
                 this.roundedCorners = parseFloat(savedRoundedCorners) || 1.00;
             }
-        }
-    }
-
-    private fixWebkit() {
-        const isWebKit = navigator.userAgent.includes("WebKit") && !navigator.userAgent.includes("Chrome") && !navigator.userAgent.includes("Chromium");
-        if (isWebKit) {
-            document.documentElement.style.setProperty("--zyn-background-app", "#ffffff09");
         }
     }
 

@@ -5,7 +5,7 @@
   background variables & classes
   */
 
-  --zyn-background-app: linear-gradient(135deg, #ffffff10 , var(--zyn-background-dark));
+  --zyn-background-app: #ffffff10;
   .zyn-background-app {
     background: var(--zyn-background-app);
   }
