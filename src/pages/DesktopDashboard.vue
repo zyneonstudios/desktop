@@ -85,6 +85,28 @@ import CardCollapsable from "../components/shared/desktopelements/CardCollapsabl
             <li>Import from NEXUS App, Modrinth App, CurseForge App, Prism and Minecraft Launcher options</li>
           </ul>
           <br>
+          <strong>Modrinth Integration:</strong>
+          <ul class="list-disc pl-5">
+            <li>Integrate Modrinth as a search and installation source for mods, resource packs, shaders, maps, data packs, servers etc.</li>
+            <li>Add a Modrinth API integration, authentication and modpack publishing and management tool</li>
+          </ul>
+          <br>
+          <strong>CurseForge Integration:</strong>
+          <ul class="list-disc pl-5">
+            <li>Integrate CurseForge as a search and installation source for mods, resource packs, shaders, maps, data packs, servers etc.</li>
+            <li>Add a CurseForge API integration, authentication and modpack publishing and management tool</li>
+          </ul>
+          <br>
+          <strong>Zyneon Mods Integration:</strong>
+          <ul class="list-disc pl-5">
+            <li>Integrate our own content distribution platform when it's ready</li>
+          </ul>
+          <br>
+          <strong>Local Content Integration:</strong>
+          <ul class="list-disc pl-5">
+            <li>Allow users to add local files and tag them to be searchable and usable in instance management/discover search</li>
+          </ul>
+          <br>
           <strong>Tool instances:</strong>
           <ul class="list-disc pl-5">
             <li>Add a Markdown editor</li>
@@ -192,6 +214,12 @@ import CardCollapsable from "../components/shared/desktopelements/CardCollapsabl
         </template>
         <template #content>
           List is coming soon (w.i.p.)
+        </template>
+      </CardCollapsable>
+
+      <CardCollapsable class="zyn-ov-brighter-200" border="1px solid var(--zyn-ov-brighter-200)" disabled>
+        <template #header>
+          Disabled
         </template>
       </CardCollapsable>
     </div>

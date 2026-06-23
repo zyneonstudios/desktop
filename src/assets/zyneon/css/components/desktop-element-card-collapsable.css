@@ -53,12 +53,16 @@
     border-radius: var(--zyn-br-md);
 
     .header {
-        background: transparent !important;
+        background: transparent;
         cursor: not-allowed;
 
         i {
             opacity: 0.75;
             transform: rotate(0deg);
         }
+    }
+
+    .header:hover {
+        background: transparent;
     }
 }

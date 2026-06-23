@@ -1,4 +1,4 @@
-# Zyneon Desktop [![v27/0.12: Alpha](https://img.shields.io/badge/v27/0.12-Alpha-orange.svg)](#) [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
+# Zyneon Desktop [![v27/0.12: Alpha](https://img.shields.io/badge/v27/0.12-Alpha-orange.svg)](#) [![AGPLv3 License](https://img.shields.io/badge/License-AGPL%203-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 
 [![NodeJS](https://img.shields.io/badge/nodejs-26.2.0-green?style=for-the-badge)](https://nodejs.org/en/download)
 [![PNPM](https://img.shields.io/badge/pnpm-11.5.1-blue?style=for-the-badge)](https://pnpm.io/installation)
@@ -21,6 +21,7 @@ It is the official successor to the [NEXUS App](https://github.com/nerotvlive/ne
   * [Downloads](#downloads)
   * [Building](#building-from-source-development)
   * [Contributing](#contributing)
+* [Project Identity](#project-identity)
 * [Contact & Feedback](#contact)
 
 ---
@@ -78,6 +79,15 @@ Contributions of any kind are welcome! We are currently looking for new team mem
 
 1. Fork the repository.
 3. Open a **Pull Request** or [contact us](#contact) first to coordinate.
+
+---
+
+## Project Identity
+
+Project authorship is tracked in [AUTHORS](AUTHORS).
+Attribution and third-party notices are collected in [NOTICE](NOTICE).
+Branding and trademark usage rules are documented in [BRANDING.md](BRANDING.md).
+Third-party packages and dependency notices are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 ---
 
