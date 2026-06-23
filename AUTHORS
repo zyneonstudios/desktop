@@ -9,5 +9,8 @@ Contributors:
 - nerotvlive
 - See the repository history and pull request record for additional authorship.
 
-This file is intended to record project ownership, authorship, and stewardship.
-It does not replace the copyright or license notices in LICENSE.md.
+This file is intended to record project ownership, authorship, and stewardship
+for the Zyneon Desktop project itself.
+
+Third-party package authors and dependency license notices are documented in
+THIRD_PARTY_NOTICES.md and the respective package metadata.
