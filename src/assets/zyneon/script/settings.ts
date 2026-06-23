@@ -29,7 +29,7 @@ export class settings {
     private fixWebkit() {
         const isWebKit = navigator.userAgent.includes("WebKit") && !navigator.userAgent.includes("Chrome") && !navigator.userAgent.includes("Chromium");
         if (isWebKit) {
-            document.documentElement.style.setProperty("--zyn-background-app", "#ffffff10");
+            document.documentElement.style.setProperty("--zyn-background-app", "#ffffff09");
         }
     }
 
@@ -87,8 +87,8 @@ export class settings {
         let opacity = this.getBackgroundAccentOpacity();
         if (opacity < 0) opacity = 0;
         if (opacity > 1) opacity = 1;
-        if (opacity > 0.99) {
-            return "";
+        if (opacity >= 0.99) {
+            return "99";
         }
         const percentValue = Math.round(opacity * 100);
         return percentValue.toString().padStart(2, '0');
