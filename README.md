@@ -88,4 +88,4 @@ Have questions or want to provide feedback?
 * **Direct Contact:** `@nerotvlive` (via Discord)
 
 ---
-*Zyneon Desktop is an independent project and not affiliated with Mojang AB, Mojang Studios, XBOX, XBOX Game Studios, Microsoft, Rinth Inc., Spark Universe, Modrinth, Overwolf or CurseForge.*
+*Zyneon Desktop is an independent project and not affiliated with Minecraft, Mojang AB, Mojang Studios, XBOX, XBOX Game Studios, Microsoft, Rinth Inc., Spark Universe, Modrinth, Overwolf or CurseForge.*
