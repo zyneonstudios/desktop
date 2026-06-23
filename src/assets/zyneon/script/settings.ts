@@ -4,6 +4,7 @@ export class settings {
     private dynamicPanel = true;
 
     private theme = "dark";
+    private roundedCorners = 1.00;
     private backgroundAccent = "#FF00FF"
     private backgroundAccentOpacity = 0.25;
     private language = "en";
@@ -24,6 +25,15 @@ export class settings {
         if (savedBgAccentOpacity !== null) {
             this.backgroundAccentOpacity = parseFloat(savedBgAccentOpacity) || 0.25;
         }
+        const savedRoundedCorners = localStorage.getItem("roundedCorners");
+        if (savedRoundedCorners !== null) {
+            if(savedRoundedCorners === "0") {
+                document.documentElement.style.setProperty("--zyn-br", "0");
+                this.roundedCorners = 0;
+            } else {
+                this.roundedCorners = parseFloat(savedRoundedCorners) || 1.00;
+            }
+        }
     }
 
     private fixWebkit() {
@@ -43,6 +53,9 @@ export class settings {
 
     public getTheme(): string {
         return this.theme;
+    }
+    public getRoundedCorners(): number {
+        return this.roundedCorners;
     }
 
     public getBackgroundAccent(): string {
@@ -92,6 +105,24 @@ export class settings {
         }
         const percentValue = Math.round(opacity * 100);
         return percentValue.toString().padStart(2, '0');
+    }
+
+    public setRoundedCorners(changedViaRange:boolean,value: number) {
+        this.roundedCorners = value;
+        localStorage.setItem("roundedCorners", value.toString());
+        console.log(value+" Saved: "+localStorage.getItem("roundedCorners"));
+        if (changedViaRange) {
+            const numberInput = document.getElementById("background-rounded-number") as HTMLInputElement;
+            if (numberInput) {
+                numberInput.value = value.toString();
+            }
+        } else {
+            const rangeInput = document.getElementById("background-rounded-range") as HTMLInputElement;
+            if (rangeInput) {
+                rangeInput.value = value.toString();
+            }
+        }
+        document.documentElement.style.setProperty("--zyn-br", value+"rem");
     }
 
     public setBackgroundAccent(value: string) {

@@ -23,7 +23,7 @@ import Card from "../components/shared/desktopelements/Card.vue";
           </p>
         </template>
         <template #footer>
-          <strong>Just click here to report an issue on GitHub</strong>
+          <strong class="zyn-ov-darker-400 px-3 zyn-br-sm">Just click here to report an issue on GitHub</strong>
         </template>
       </CardStructured>
       <CardStructured class="bg-blue-900 w-full opacity-65 text-white" border="1px solid var(--zyn-ov-brighter-200)">
@@ -35,7 +35,8 @@ import Card from "../components/shared/desktopelements/Card.vue";
         <template #content>
           <p>
             We are actively working on this project and welcome any feedback or contributions.<br>
-            If you want to join this project, please contact us via GitHub or contact our leader on Discord.<span class="mx-1 px-1 zyn-br-sm opacity-10 hover:opacity-100 transition-all bg-transparent hover:bg-gray-800">(a server is work in progress)</span><br>
+            If you want to join this project, please contact us via GitHub or contact our leader on Discord.<br>
+            <span class="px-1 zyn-br-sm opacity-10 hover:opacity-100 transition-all bg-transparent hover:bg-gray-800">(a server is in the works)</span><br>
           </p>
         </template>
         <template #footer>

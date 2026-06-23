@@ -46,6 +46,8 @@
     ZyneonSettings.setCommandbar(ZyneonSettings.useCommandbar);
     ZyneonSettings.setDynamicPanel(ZyneonSettings.useDynamicPanel);
     ZyneonSettings.setBackgroundAccent(ZyneonSettings.getBackgroundAccent());
+    ZyneonSettings.setRoundedCorners(false,ZyneonSettings.getRoundedCorners());
+    ZyneonSettings.setBackgroundAccentOpacity(false,ZyneonSettings.getBackgroundAccentOpacity());
   })
 </script>
 
