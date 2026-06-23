@@ -15,13 +15,12 @@ It is the official successor to the [NEXUS App](https://github.com/nerotvlive/ne
 
 ---
 
-## 📌 Contents
+## Contents
 * [Concept](#concept)
 * [Installation](#installation-and-building)
   * [Downloads](#downloads)
   * [Building](#building-from-source-development)
   * [Contributing](#contributing)
-* [Roadmap](#roadmap)
 * [Contact & Feedback](#contact)
 
 ---
@@ -82,30 +81,11 @@ Contributions of any kind are welcome! We are currently looking for new team mem
 
 ---
 
-## Roadmap
-
-### Milestone 1: Basic Structure & UI Prototype
-- [x] Repository setup & CI/CD (GitHub Actions)
-- [x] Tech stack definition (Tauri, Vite, Vue, Tailwind)
-- [x] Custom titlebar & window controls
-- [x] Main menu logic (Sidebar)
-- [ ] **UI Integration of Core Pages:**
-  - [ ] Dashboard (Start + News)
-  - [ ] Discover (+Search)
-  - [ ] Downloads Manager
-  - [ ] Library (Instance Management)
-  - [ ] Settings
-
-### Milestone 2: not defined yet
-- [ ] Expand the Roadmap (wip)
-
----
-
 ## Contact
 Have questions or want to provide feedback?
 
-* **Discord (Support & Community):** [Join our Server](https://discord.gg/hSNSa8Qu4r)
+* A Discord server is the works. Coming soon.
 * **Direct Contact:** `@nerotvlive` (via Discord)
 
 ---
-*Zyneon Desktop is an independent project and not affiliated with Mojang AB or Microsoft.*
+*Zyneon Desktop is an independent project and not affiliated with Mojang AB, Mojang Studios, XBOX, XBOX Game Studios, Microsoft, Rinth Inc., Spark Universe, Modrinth, Overwolf or CurseForge.*

@@ -43,6 +43,7 @@
   })
 
   onMounted(() => {
+    showPage("dashboard");
     ZyneonSettings.setCommandbar(ZyneonSettings.useCommandbar);
     ZyneonSettings.setDynamicPanel(ZyneonSettings.useDynamicPanel);
     ZyneonSettings.setBackgroundAccent(ZyneonSettings.getBackgroundAccent());
