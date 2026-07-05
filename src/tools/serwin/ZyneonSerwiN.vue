@@ -70,7 +70,7 @@ onMounted(() => {
               <span>Reload (F5/CTRL + R)</span>
             </button>
             <hr class="opacity-20 mb-2">
-            <button id="settings-button" class="btn" @click="showPage('settings')">
+            <button id="settings-button" class="btn">
               <i class="icon-bolt"></i>
               <span>Settings</span>
             </button>
