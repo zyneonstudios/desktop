@@ -41,7 +41,7 @@ document.addEventListener('contextmenu', (e) => {
   e.preventDefault()
 })
 
-const editor = ref(null);
+const editor = ref<InstanceType<typeof JEEditor> | null>(null);
 
 onMounted(() => {
   showPage("start");
@@ -49,9 +49,13 @@ onMounted(() => {
   document.documentElement.style.setProperty("--zyn-background-color", "#131313");
 })
 
-function loadContent(path_or_url:string) {
+function loadContent() {
+  const input = document.getElementById("input-bar") as HTMLInputElement;
+  const path_or_url = input.value;
   showPage("editor");
-  editor.value.loadContent(path_or_url);
+  if(editor) {
+    editor.value?.loadContent(path_or_url);
+  }
 }
 
 const handleWheel = (event: WheelEvent) => {
@@ -79,7 +83,7 @@ const handleWheel = (event: WheelEvent) => {
       </template>
       <template #title data-tauri-drag-region class="w-full">
         <div data-tauri-drag-region class="flex gap-2 justify-center items-center h-full w-full relative">
-          <input type="text" style="width: 100%;" placeholder="Enter JSON path or URL" class="bg-transparent border-none outline-none zyn-br-sm zyn-ov-darker-700 py-1 px-2" @keyup.enter="loadContent($event.target.value);" />
+          <input id="input-bar" type="text" style="width: 100%;" placeholder="Enter JSON path or URL" class="bg-transparent border-none outline-none zyn-br-sm zyn-ov-darker-700 py-1 px-2" @keyup.enter="loadContent();" />
         </div>
       </template>
       <template #end data-tauri-drag-region>
