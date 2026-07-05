@@ -8,7 +8,7 @@ import InputBar from "./InputBar.vue";
     <InputBar background="var(--zyn-ov-darker-500)">
       <template #start>
         <div class="left-0 top-0 h-6 w-6 relative">
-          <i class="icon-terminal absolute top-0 left-0" style="padding: 0.175rem 0.5rem"></i>
+          <i class="icon-terminal absolute top-0 left-0" style="padding: 0.33rem 0.5rem"></i>
         </div>
       </template>
       <template #center>

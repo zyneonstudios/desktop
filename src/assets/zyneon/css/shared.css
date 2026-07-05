@@ -350,11 +350,6 @@ body {
     -webkit-user-select: none;
   }
 
-  #command-bar {
-    position: absolute;
-    top: -0.85rem;
-  }
-
   .zyneon-desktop-view {
     max-height: calc(100vh - 2.5rem);
   }

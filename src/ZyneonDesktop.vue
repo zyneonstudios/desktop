@@ -61,19 +61,14 @@
       <template #start>
         <div class="w-full h-full gap-2 flex justify-start items-center" data-tauri-drag-region>
           <img alt="" class="z-n1 h-4 ml-3" src="./assets/zyneon/img/zyneon-desktop-title.png" data-tauri-drag-region>
-          <div class="relative z-1">
-            <div class="flex gap-2 items-center">
-              <InputBarCommand class="hidden" id="command-bar" />
-            </div>
-          </div>
         </div>
       </template>
       <template #title>
-        <div class="hidden"></div>
+        <InputBarCommand class="hidden ml-1" id="command-bar" />
       </template>
       <template #end>
         <div class="w-full h-full gap-2 flex justify-end items-center pr-6" data-tauri-drag-region>
-          <Badge background="var(--color-red-300)" data-tauri-drag-region>
+          <Badge class="mr-2" background="var(--color-red-300)" data-tauri-drag-region>
             <strong data-tauri-drag-region class="text-red-900">v27/0.13 (alpha)</strong>
           </Badge>
         </div>

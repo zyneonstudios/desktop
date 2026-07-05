@@ -68,7 +68,7 @@ async function launchTool(toolName: string) {
   <div class="w-full h-full p-3">
     <h1 class="text-2xl font-bold mb-2">Tools & Experiments</h1>
     <div class="grid grid-cols-[repeat(auto-fit,minmax(333px,1fr))] gap-3">
-      <CardStructured class="zyn-ov-brighter-200 opacity-75 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <h2 class="text-xl font-bold flex gap-1">CommandBar<badge background="#00000075">EX</badge><badge background="#521c7875">NAP</badge></h2>
         </template>
@@ -83,7 +83,7 @@ async function launchTool(toolName: string) {
           </div>
         </template>
       </CardStructured>
-      <CardStructured class="zyn-ov-brighter-200 opacity-75 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <h2 class="text-xl font-bold flex gap-1">DynamicPanel<badge background="#00000075">EX</badge><badge background="#521c7875">NAP</badge></h2>
         </template>
@@ -98,7 +98,7 @@ async function launchTool(toolName: string) {
           </div>
         </template>
       </CardStructured>
-      <CardStructured class="zyn-ov-brighter-200 opacity-75 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <h2 class="text-xl font-bold flex gap-1 overflow-hidden whitespace-nowrap">Minecraft Launcher<badge background="#00000075">FT</badge></h2>
         </template>
@@ -108,12 +108,12 @@ async function launchTool(toolName: string) {
           </div>
         </template>
         <template #footer>
-          <div class="w-100 flex justify-end">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md" style="border: 1px solid var(--zyn-ov-brighter-200);" onclick="this.classList.remove('zyn-ov-brighter-200'); this.classList.add('bg-red-900'); this.innerText = 'FAILED';">Launch</button>
+          <div class="w-100 flex justify-end align-bottom min-h-9">
+            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" onclick="this.classList.remove('zyn-ov-brighter-200'); this.classList.add('bg-red-900'); this.innerText = 'FAILED';">Launch</button>
           </div>
         </template>
       </CardStructured>
-      <CardStructured class="zyn-ov-brighter-200 opacity-75 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <h2 class="text-xl font-bold flex gap-1 overflow-hidden whitespace-nowrap">Clone window<badge background="#00000075">EX</badge><badge background="#00000075">FT</badge></h2>
         </template>
@@ -123,12 +123,12 @@ async function launchTool(toolName: string) {
           </div>
         </template>
         <template #footer>
-          <div class="w-100 flex justify-end">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="cloneWindow();">Clone</button>
+          <div class="w-100 flex justify-end align-bottom min-h-9">
+            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="cloneWindow();">Clone</button>
           </div>
         </template>
       </CardStructured>
-      <CardStructured class="zyn-ov-brighter-200 opacity-75 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <h2 class="text-xl font-bold flex gap-1 overflow-hidden whitespace-nowrap">SerwiN<badge background="#00000075">EX</badge><badge background="#00000075">FT</badge></h2>
         </template>
@@ -138,12 +138,12 @@ async function launchTool(toolName: string) {
           </div>
         </template>
         <template #footer>
-          <div class="w-100 flex justify-end">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('SerwiN'); e.target.innerText = 'Show'; }">Launch</button>
+          <div class="w-100 flex justify-end align-bottom min-h-9">
+            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('SerwiN'); e.target.innerText = 'Show'; }">Launch</button>
           </div>
         </template>
       </CardStructured>
-      <CardStructured class="zyn-ov-brighter-200 opacity-75 hover:opacity-100 transition-all cursor-pointer text-white" border="1px solid var(--zyn-ov-brighter-200)">
+      <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
           <h2 class="text-xl font-bold flex gap-1 overflow-hidden whitespace-nowrap">JSON Explorer<badge background="#00000075">EX</badge><badge background="#00000075">FT</badge></h2>
         </template>
@@ -153,11 +153,22 @@ async function launchTool(toolName: string) {
           </div>
         </template>
         <template #footer>
-          <div class="w-100 flex justify-end">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('JSON-Explorer'); e.target.innerText = 'Show'; }">Launch</button>
+          <div class="w-100 flex justify-end align-bottom min-h-9">
+            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('JSON-Explorer'); e.target.innerText = 'Show'; }">Launch</button>
           </div>
         </template>
       </CardStructured>
     </div>
   </div>
 </template>
+
+<style scoped>
+button.absolute {
+  transition: all 0.2s ease;
+}
+
+button.absolute:hover {
+  background: var(--zyn-ov-brighter-400);
+  cursor: pointer;
+}
+</style>
