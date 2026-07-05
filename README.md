@@ -54,7 +54,7 @@ To build Zyneon Desktop locally, you will need the following prerequisites:
 | **pnpm**     | `>=11.10.0`                                | [pnpm.io](https://pnpm.io/)                              |
 | **Rust**     | `>=1.96.1`                                 | [rust-lang.org](https://www.rust-lang.org/tools/install) |
 
-> [!WARNING]
+> [!NOTE]
 > **(RE)start your IDE. If the commands (pnpm, node) are not available, make sure you've installed them and restart your IDE or restart your system!**
 
 After you installed these, you can clone the repository (or fork it first) to your local machine.<br>
