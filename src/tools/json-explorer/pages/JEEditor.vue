@@ -23,6 +23,9 @@ async function loadContent(input: string) {
       rawContent = await response.text();
     } else {
       let cleanPath = decodeURIComponent(input);
+      if(cleanPath.startsWith("\"")) {
+        cleanPath = cleanPath.replaceAll("\"", "");
+      }
       if (cleanPath.startsWith('file://')) {
         cleanPath = cleanPath.replace('file://', '');
       }
