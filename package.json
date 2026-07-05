@@ -1,7 +1,7 @@
 {
   "name": "zyneon-desktop",
   "private": true,
-  "version": "27.0.12",
+  "version": "27.0.13",
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "scripts": {
@@ -16,6 +16,8 @@
     "@tauri-apps/plugin-shell": "^2.3.5",
     "bootstrap-icons": "^1.13.1",
     "lucide-static": "^1.8.0",
+    "monaco-editor": "^0.55.1",
+    "monaco-editor-vue3": "^1.0.5",
     "vue": "^3.5.32"
   },
   "devDependencies": {

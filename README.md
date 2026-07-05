@@ -1,6 +1,6 @@
-# Zyneon Desktop [![v27/0.12: Alpha](https://img.shields.io/badge/v27/0.12-Alpha-orange.svg)](#) [![AGPL 3.0-or-later License](https://img.shields.io/badge/License-AGPL%203.0--or--later-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
+# Zyneon Desktop [![v27/0.13: Alpha](https://img.shields.io/badge/v27/0.13-Alpha-orange.svg)](#) [![AGPL 3.0-or-later License](https://img.shields.io/badge/License-AGPL%203.0--or--later-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 
-[![NodeJS](https://img.shields.io/badge/Node.js-required-green?style=for-the-badge)](https://nodejs.org/en/download)
+[![NodeJS](https://img.shields.io/badge/Node.js-24_LTS+-green?style=for-the-badge)](https://nodejs.org/en/download)
 [![PNPM](https://img.shields.io/badge/pnpm-11.10.0-blue?style=for-the-badge)](https://pnpm.io/installation)
 [![Rust](https://img.shields.io/badge/Rust-1.96.1-yellow?style=for-the-badge)](https://www.rust-lang.org/tools/install)
 

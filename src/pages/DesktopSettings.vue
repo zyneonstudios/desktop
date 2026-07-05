@@ -9,24 +9,6 @@ import { ZyneonSettings } from "../assets/zyneon/script/settings.ts";
 
     <div class="flex w-full zyn-ov-darker-500 p-2 zyn-br-md my-2">
       <div class="flex w-full">
-        <strong>Enable the CommandBar</strong>
-      </div>
-      <div class="flex w-full justify-end align-middle items-center">
-        <input type="checkbox" :checked="ZyneonSettings.useCommandbar" @change="(e) => ZyneonSettings.setCommandbar((e.target as HTMLInputElement).checked)"/>
-      </div>
-    </div>
-
-    <div class="flex w-full zyn-ov-darker-500 p-2 zyn-br-md my-2">
-      <div class="flex w-full">
-        <strong>Enable the DynamicPanel</strong>
-      </div>
-      <div class="flex w-full justify-end align-middle items-center">
-        <input type="checkbox" :checked="ZyneonSettings.useDynamicPanel" @change="(e) => ZyneonSettings.setDynamicPanel((e.target as HTMLInputElement).checked)"/>
-      </div>
-    </div>
-
-    <div class="flex w-full zyn-ov-darker-500 p-2 zyn-br-md my-2">
-      <div class="flex w-full">
         <strong>Border radius base value </strong>
       </div>
       <div class="flex w-full justify-end align-middle items-center">

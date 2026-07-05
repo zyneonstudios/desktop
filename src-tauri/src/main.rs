@@ -13,6 +13,13 @@ fn main() {
           let _ = w.set_focus();
         });
       }))
+      .invoke_handler(tauri::generate_handler![read_local_file])
       .run(tauri::generate_context!())
       .expect("error while running tauri application");
+}
+
+#[tauri::command]
+async fn read_local_file(path: String) -> Result<String, String> {
+    std::fs::read_to_string(&path)
+        .map_err(|err| format!("Error ({}): {}", path, err))
 }

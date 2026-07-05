@@ -1,9 +1,16 @@
 <script setup lang="ts">
   import '../../assets/zyneon/css/components/desktop-titlebar.css';
   import DesktopTitlebarButtons from "./DesktopTitlebarButtons.vue";
-  defineProps<{
-    title: string
-  }>()
+
+  withDefaults(
+      defineProps<{
+        title: string
+        hideInsteadClose?: boolean
+      }>(),
+      {
+        hideInsteadClose: false
+      }
+  )
 </script>
 
 <template>
@@ -12,16 +19,16 @@
       <div data-tauri-drag-region class="start">
         <slot name="start"></slot>
       </div>
-      <strong data-tauri-drag-region class="title">
+      <div data-tauri-drag-region class="title w-full flex-1">
         <slot name="title">
           {{ title }}
         </slot>
-      </strong>
+      </div>
       <div data-tauri-drag-region class="end">
         <slot name="end"></slot>
         <div class="window-controls-placeholder"></div>
       </div>
     </div>
-    <DesktopTitlebarButtons />
+    <DesktopTitlebarButtons :hideInsteadClose="hideInsteadClose" />
   </div>
 </template>

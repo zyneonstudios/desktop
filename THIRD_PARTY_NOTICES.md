@@ -15,14 +15,16 @@ license text, notice requirements, and copyright terms.
 
 ## Runtime dependencies
 
-| Package | Version | License |
-| --- | ---: | --- |
-| `@tauri-apps/api` | `2.10.1` | MIT |
-| `@tauri-apps/plugin-opener` | `2.5.4` | MIT |
-| `@tauri-apps/plugin-shell` | `2.3.5` | MIT |
-| `bootstrap-icons` | `1.13.1` | MIT |
-| `lucide-static` | `1.8.0` | ISC |
-| `vue` | `3.5.32` | MIT |
+| Package                     |  Version | License |
+|-----------------------------|---------:|---------|
+| `@tauri-apps/api`           | `2.10.1` | MIT     |
+| `@tauri-apps/plugin-opener` |  `2.5.4` | MIT     |
+| `@tauri-apps/plugin-shell`  |  `2.3.5` | MIT     |
+| `bootstrap-icons`           | `1.13.1` | MIT     |
+| `lucide-static`             |  `1.8.0` | ISC     |
+| `monaco-editor`             | `0.52.2` | MIT     |
+| `monaco-editor-vue3`        |  `1.0.5` | MIT     |
+| `vue`                       | `3.5.32` | MIT     |
 
 ## Build-time dependencies
 
@@ -52,16 +54,16 @@ for the packages that are actually bundled or otherwise shipped to users.
 These crates are compiled into the shipped application binary through
 `src-tauri/Cargo.toml`.
 
-| Crate | Version | License |
-| --- | ---: | --- |
-| `log` | `0.4.29` | MIT |
-| `reqwest` | `0.13.2` | MIT |
+| Crate |   Version | License |
+| --- |----------:| --- |
+| `log` |  `0.4.29` | MIT |
+| `reqwest` |  `0.13.2` | MIT |
 | `serde` | `1.0.228` | MIT |
 | `serde_json` | `1.0.149` | MIT |
-| `tauri` | `2.10.3` | MIT |
-| `tauri-plugin-log` | `2.8.0` | MIT |
-| `tauri-plugin-opener` | `2.5.4` | MIT |
-| `tauri-plugin-single-instance` | `2.4.1` | MIT |
+| `tauri` |  `2.10.3` | MIT |
+| `tauri-plugin-log` |   `2.8.0` | MIT |
+| `tauri-plugin-opener` |   `2.5.4` | MIT |
+| `tauri-plugin-single-instance` |   `2.4.1` | MIT |
 
 ## Rust build-time dependencies
 

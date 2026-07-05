@@ -1,7 +1,7 @@
 export class settings {
 
-    private commandbar = true;
-    private dynamicPanel = true;
+    private commandbar = false;
+    private dynamicPanel = false;
 
     private theme = "dark";
     private roundedCorners = 1.00;
@@ -10,11 +10,11 @@ export class settings {
     private language = "en";
 
     constructor() {
-        if(localStorage.getItem("useCommandbar") === "false") {
-            this.commandbar = false;
+        if(localStorage.getItem("useCommandbar") === "true") {
+            this.commandbar = true;
         }
-        if(localStorage.getItem("useDynamicPanel") === "false") {
-            this.dynamicPanel = false;
+        if(localStorage.getItem("useDynamicPanel") === "true") {
+            this.dynamicPanel = true;
         }
         const savedBgAccent = localStorage.getItem("backgroundAccent");
         if (savedBgAccent !== null) {

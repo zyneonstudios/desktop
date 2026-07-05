@@ -7,6 +7,7 @@
   import DesktopDiscover from "./pages/DesktopDiscover.vue";
   import DesktopDownloads from "./pages/DesktopDownloads.vue";
   import DesktopLibrary from "./pages/DesktopLibrary.vue";
+  import DesktopTools from "./pages/DesktopTools.vue";
   import DesktopSearch from "./pages/DesktopSearch.vue";
   import DesktopSettings from "./pages/DesktopSettings.vue";
   import { WindowControls } from "./assets/zyneon/script/windowControls.ts"
@@ -21,12 +22,14 @@
     document.getElementById("discover")?.classList.remove("active");
     document.getElementById("downloads")?.classList.remove("active");
     document.getElementById("library")?.classList.remove("active");
+    document.getElementById("tools")?.classList.remove("active");
     document.getElementById("search")?.classList.remove("active");
     document.getElementById("settings")?.classList.remove("active");
     document.getElementById("dashboard-button")?.classList.remove("active");
     document.getElementById("discover-button")?.classList.remove("active");
     document.getElementById("downloads-button")?.classList.remove("active");
     document.getElementById("library-button")?.classList.remove("active");
+    document.getElementById("tools-button")?.classList.remove("active");
     document.getElementById("search-button")?.classList.remove("active");
     document.getElementById("settings-button")?.classList.remove("active");
     document.getElementById(page)?.classList.add("active");
@@ -71,7 +74,7 @@
       <template #end>
         <div class="w-full h-full gap-2 flex justify-end items-center pr-6" data-tauri-drag-region>
           <Badge background="var(--color-red-300)" data-tauri-drag-region>
-            <strong data-tauri-drag-region class="text-red-900">v27/0.12 (alpha)</strong>
+            <strong data-tauri-drag-region class="text-red-900">v27/0.13 (alpha)</strong>
           </Badge>
         </div>
       </template>
@@ -97,6 +100,10 @@
            <button id="library-button" class="btn" @click="showPage('library')">
              <i class="icon-library"></i>
              <span>Library</span>
+           </button>
+           <button id="tools-button" class="btn" @click="showPage('tools')">
+             <i class="icon-wrench"></i>
+             <span>Tools & Experiments</span>
            </button>
          </template>
          <template #bottom data-tauri-drag-region>
@@ -126,6 +133,7 @@
           <DesktopDiscover id="discover" class="zyneon-desktop-page" />
           <DesktopDownloads id="downloads" class="zyneon-desktop-page" />
           <DesktopLibrary id="library" class="zyneon-desktop-page" />
+          <DesktopTools id="tools" class="zyneon-desktop-page" />
           <DesktopSearch id="search" class="zyneon-desktop-page" />
           <DesktopSettings id="settings" class="zyneon-desktop-page" />
         </DesktopPane>
