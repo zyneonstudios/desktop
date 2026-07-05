@@ -1,8 +1,8 @@
 # Zyneon Desktop [![v27/0.12: Alpha](https://img.shields.io/badge/v27/0.12-Alpha-orange.svg)](#) [![AGPL 3.0-or-later License](https://img.shields.io/badge/License-AGPL%203.0--or--later-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 
 [![NodeJS](https://img.shields.io/badge/Node.js-required-green?style=for-the-badge)](https://nodejs.org/en/download)
-[![PNPM](https://img.shields.io/badge/pnpm-10.33.0-blue?style=for-the-badge)](https://pnpm.io/installation)
-[![Rust](https://img.shields.io/badge/Rust-1.77.2-yellow?style=for-the-badge)](https://www.rust-lang.org/tools/install)
+[![PNPM](https://img.shields.io/badge/pnpm-11.10.0-blue?style=for-the-badge)](https://pnpm.io/installation)
+[![Rust](https://img.shields.io/badge/Rust-1.96.1-yellow?style=for-the-badge)](https://www.rust-lang.org/tools/install)
 
 
 
@@ -46,12 +46,13 @@ Automatically generated builds for macOS (ARM/x64), Linux (x64), and Windows (AR
 
 To build Zyneon Desktop locally, you will need the following prerequisites:
 
-| Tool                | Version                                                | Link                                                     |
-|:--------------------|:-------------------------------------------------------|:---------------------------------------------------------|
-| **Tauri v2**        | Follow the platform-specific prerequisites            | [See here](https://v2.tauri.app/start/prerequisites/)    |
-| **Node.js**         | Use the version required by Tauri v2                  | [nodejs.org](https://nodejs.org/)                        |
-| **pnpm**            | `>=10.33.0`                                            | [pnpm.io](https://pnpm.io/)                              |
-| **Rust**            | `>=1.77.2`                                             | [rust-lang.org](https://www.rust-lang.org/tools/install) |
+| Tool         | Version                                    | Link                                                     |
+|:-------------|:-------------------------------------------|:---------------------------------------------------------|
+| **OS**       | Linux (recommended), Windows 11+, (macOS)  | Mainly developed on Arch Linux (btw) atm                 |
+| **Tauri v2** | Follow the platform-specific prerequisites | [See here](https://v2.tauri.app/start/prerequisites/)    |
+| **Node.js**  | Use the version required by Tauri v2       | [nodejs.org](https://nodejs.org/)                        |
+| **pnpm**     | `>=11.10.0`                                | [pnpm.io](https://pnpm.io/)                              |
+| **Rust**     | `>=1.96.1`                                 | [rust-lang.org](https://www.rust-lang.org/tools/install) |
 
 > [!WARNING]
 > **(RE)start your IDE. If the commands (pnpm, node) are not available, make sure you've installed them and restart your IDE or restart your system!**
@@ -59,20 +60,73 @@ To build Zyneon Desktop locally, you will need the following prerequisites:
 After you installed these, you can clone the repository (or fork it first) to your local machine.<br>
 Open it with RustRover or VSCode (or any other IDE that supports Rust and JavaScript/TypeScript) and run the following commands in the project root folder:
 
-To setup the project:
-```
-pnpm install
+### How to run, build and setup
+<details>
+
+<summary>On Linux (recommended)</summary>
+
+To setup/initialize the project
+```bash
+bash devscripts/init.sh
 ```
 
-To run the application:
+To dev-run the application:
+```bash
+bash devscripts/dev.sh
 ```
-pnpm run tauri dev
+
+To build the application:
+```bash
+bash devscripts/build.sh
+```
+
+</details>
+<details>
+
+<summary>On Windows 11+</summary>
+
+To setup/initialize the project
+```
+devscripts/init.bat
+```
+
+To dev-run the application:
+```
+devscripts/dev.bat
 ```
 
 To build the application:
 ```
+devscripts/build.bat
+```
+
+</details>
+<details>
+
+<summary>macOS/other operating systems (unrecommended)</summary>
+
+> [!WARNING]
+> **These commands do possibly work, but we do not guarantee that they will work. UNTESTED!**
+
+To setup/initialize the project
+```shell
+pnpm install
+cd src-tauri
+cargo check
+```
+
+To dev-run the application:
+```shell
+pnpm run tauri dev
+```
+
+To build the application:
+```shell
 pnpm run tauri build
 ```
+
+</details>
+
 
 ### Contributing
 Contributions of any kind are welcome! We are currently looking for new team members to help build the next generation of modding utilities.
