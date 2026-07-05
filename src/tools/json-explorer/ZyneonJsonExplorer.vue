@@ -65,7 +65,7 @@ const handleWheel = (event: WheelEvent) => {
 
 <template>
   <div class="zyneon-desktop zyn-background-body" id="main">
-    <DesktopTitlebar class="zyneon-desktop-titlebar" title="Zyneon Desktop" id="titlebar" hideInsteadClose>
+    <DesktopTitlebar class="zyneon-desktop-titlebar" title="Zyneon Desktop" id="titlebar">
       <template #start class="">
         <div class="w-fit h-full gap-2 flex justify-start items-center" data-tauri-drag-region>
           <img alt="" class="z-n1 h-4 ml-3 hidden" src="../../assets/zyneon/img/zyneon-desktop-title.png" data-tauri-drag-region>
