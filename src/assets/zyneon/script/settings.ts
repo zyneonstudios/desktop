@@ -5,6 +5,7 @@ export class settings {
 
     private theme = "dark";
     private roundedCorners = 1.00;
+    private backgroundColor = "#202020"
     private backgroundAccent = "#FF00FF"
     private backgroundAccentOpacity = 0.25;
     private language = "en";
@@ -19,6 +20,10 @@ export class settings {
         const savedBgAccent = localStorage.getItem("backgroundAccent");
         if (savedBgAccent !== null) {
             this.backgroundAccent = savedBgAccent || "#FF00FF";
+        }
+        const savedBgColor = localStorage.getItem("backgroundColor");
+        if (savedBgColor !== null) {
+            this.backgroundColor = savedBgColor || "#202020";
         }
         const savedBgAccentOpacity = localStorage.getItem("backgroundAccentOpacity");
         if (savedBgAccentOpacity !== null) {
@@ -48,6 +53,10 @@ export class settings {
     }
     public getRoundedCorners(): number {
         return this.roundedCorners;
+    }
+
+    public getBackgroundColor(): string {
+        return this.backgroundColor;
     }
 
     public getBackgroundAccent(): string {
@@ -115,6 +124,12 @@ export class settings {
             }
         }
         document.documentElement.style.setProperty("--zyn-br", value+"rem");
+    }
+
+    public setBackgroundColor(value: string) {
+        this.backgroundColor = value;
+        localStorage.setItem("backgroundColor", value);
+        document.documentElement.style.setProperty("--zyn-background-color", value);
     }
 
     public setBackgroundAccent(value: string) {

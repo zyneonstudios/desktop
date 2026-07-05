@@ -36,5 +36,14 @@ import { ZyneonSettings } from "../assets/zyneon/script/settings.ts";
       </div>
     </div>
 
+    <!--div class="flex w-full zyn-ov-darker-500 p-2 zyn-br-md my-2">
+      <div class="flex w-full">
+        <strong>Background base color</strong>
+      </div>
+      <div class="flex w-full justify-end align-middle items-center">
+        <input type="color" class="w-10 h-10 cursor-pointer rounded border-none bg-transparent" @input="(e) => ZyneonSettings.setBackgroundColor((e.target as HTMLInputElement).value)" :value="ZyneonSettings.getBackgroundColor()"/>
+      </div>
+    </div-->
+
   </div>
 </template>
