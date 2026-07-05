@@ -105,8 +105,7 @@ devscripts/build.bat
 
 <summary>macOS/other operating systems (unrecommended)</summary>
 
-> [!WARNING]
-> **These commands do possibly work, but we do not guarantee that they will work. UNTESTED!**
+> **WARNING:** These commands do possibly work, but we do not guarantee that they will work.
 
 To setup/initialize the project
 ```shell
