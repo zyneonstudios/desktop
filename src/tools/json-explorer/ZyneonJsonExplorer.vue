@@ -91,15 +91,15 @@ const handleWheel = (event: WheelEvent) => {
       </template>
     </DesktopTitlebar>
     <div data-tauri-drag-region class="flex w-full overflow-hidden h-11 relative">
-      <button id="start-button" class="btn" @click="showPage('start')">
+      <a id="start-button" class="btn" @click="showPage('start')">
         <i class="icon-home"></i>
         <span>Home</span>
-      </button>
+      </a>
       <div class="w-full flex overflow-hidden tab-bar gap-1" data-tauri-drag-region @wheel="handleWheel">
-        <button class="btn zyn-ov-brighter-100 templatebtn">
+        <a class="btn zyn-ov-brighter-100 templatebtn">
           <span>New Tab</span>
           <i class="icon-x"></i>
-        </button>
+        </a>
 
       </div>
     </div>
@@ -107,24 +107,24 @@ const handleWheel = (event: WheelEvent) => {
       <template #left data-tauri-drag-region>
         <DesktopSideMenu id="navigation" class="desktop-side-menu" data-tauri-drag-region>
           <template #top data-tauri-drag-region>
-            <button id="toggle-button" class="btn" @click="toggleMenu();">
+            <a id="toggle-button" class="btn" @click="toggleMenu();">
               <i class="icon-text-align-justify"></i>
               <span>Toggle menu</span>
-            </button>
+            </a>
           </template>
           <template #center data-tauri-drag-region>
             <br>
           </template>
           <template #bottom data-tauri-drag-region>
-            <button class="btn hover:background-color-blue-400" onclick="window.location.reload();">
+            <a class="btn hover:background-color-blue-400" onclick="window.location.reload();">
               <i class="icon-rotate-cw"></i>
               <span>Reload (F5/CTRL + R)</span>
-            </button>
+            </a>
             <hr class="opacity-20 mb-2">
-            <button id="settings-button" class="btn">
+            <a id="settings-button" class="btn">
               <i class="icon-bolt"></i>
               <span>Settings</span>
-            </button>
+            </a>
           </template>
         </DesktopSideMenu>
       </template>

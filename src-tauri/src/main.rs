@@ -2,6 +2,7 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 use tauri::Manager;
 use tauri_plugin_single_instance::init;
+use zyneon_desktop_lib::run;
 
 fn main() {
   tauri::Builder::default()
@@ -13,7 +14,7 @@ fn main() {
           let _ = w.set_focus();
         });
       }))
-      .invoke_handler(tauri::generate_handler![read_local_file])
+      .invoke_handler(tauri::generate_handler![read_local_file, check_authentication, sign_in])
       .run(tauri::generate_context!())
       .expect("error while running tauri application");
 }
@@ -22,4 +23,14 @@ fn main() {
 async fn read_local_file(path: String) -> Result<String, String> {
     std::fs::read_to_string(&path)
         .map_err(|err| format!("Error ({}): {}", path, err))
+}
+
+#[tauri::command]
+async fn check_authentication() -> bool {
+    false
+}
+
+#[tauri::command]
+async fn sign_in() -> &'static str {
+    "error"
 }

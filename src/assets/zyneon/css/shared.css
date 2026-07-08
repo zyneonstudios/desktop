@@ -350,6 +350,26 @@ body {
     -webkit-user-select: none;
   }
 
+  button {
+    background: var(--zyn-ov-brighter-200);
+    border: 1px solid var(--zyn-ov-brighter-200);
+    padding: 0 1rem;
+    border-radius: var(--zyn-br-md);
+  }
+
+  button:hover {
+    transition: all 0.15s ease;
+    background: var(--zyn-ov-brighter-300);
+    border: 1px solid var(--zyn-ov-brighter-200);
+    cursor: pointer;
+  }
+
+  button.disabled {
+    background: var(--zyn-ov-brighter-100);
+    border: 1px solid var(--zyn-ov-brighter-100);
+    cursor: default;
+  }
+
   .zyneon-desktop-view {
     max-height: calc(100vh - 2.5rem);
   }
@@ -382,10 +402,14 @@ body {
     cursor: default;
   }
 
-  .zyn-btn:disabled, .button:disabled, .btn:disabled {
+  .zyn-btn:disabled, .button:disabled, .btn:disabled, .zyn-btn.disabled, .button.disabled, .btn.disabled {
     background: transparent;
     cursor: not-allowed;
     opacity: 0.5;
+  }
+
+  i.icon-loader {
+    animation: spin 1s linear infinite !important;
   }
 }
 

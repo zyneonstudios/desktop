@@ -13,10 +13,10 @@ import '../../assets/zyneon/css/components/desktop-side-menu.css';
 
     <div class="center" data-tauri-drag-region>
       <slot name="center" data-tauri-drag-region>
-        <button class="btn" onclick="this.parentElement.parentElement.classList.toggle('active')">
+        <a class="btn" onclick="this.parentElement.parentElement.classList.toggle('active')">
           <i class="bi bi-list"></i>
           <span>Toggle menu</span>
-        </button>
+        </a>
       </slot>
     </div>
 

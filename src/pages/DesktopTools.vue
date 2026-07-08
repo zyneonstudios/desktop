@@ -4,6 +4,8 @@ import { ZyneonSettings } from "../assets/zyneon/script/settings.ts";
 import CardStructured from "../components/shared/desktopelements/CardStructured.vue";
 import Badge from "../components/shared/desktopelements/Badge.vue";
 import { WebviewWindow } from '@tauri-apps/api/webviewWindow';
+import {onMounted} from "vue";
+import { invoke } from '@tauri-apps/api/core';
 
 async function cloneWindow() {
   const windowLabel = crypto.randomUUID();
@@ -62,6 +64,31 @@ async function launchTool(toolName: string) {
     });
   }
 }
+
+async function initMinecraftTool() {
+  const card = document.querySelector('.minecraft-tool');
+  if(card) {
+    document.querySelector(".minecraft-sign-in")?.classList.add("hidden");
+    document.querySelector(".minecraft-launch")?.classList.add("hidden");
+    document.querySelector(".minecraft-initial")?.classList.add("hidden");
+    document.querySelector(".minecraft-checking")?.classList.remove("hidden");
+    document.querySelector(".minecraft-unauthorized")?.classList.add("hidden");
+    document.querySelector(".minecraft-authorized")?.classList.add("hidden");
+    const authenticated = await invoke<boolean>('check_authentication');
+    if(authenticated) {
+      document.querySelector(".minecraft-authorized")?.classList.remove("hidden");
+      document.querySelector(".minecraft-launch")?.classList.remove("hidden");
+    } else {
+      document.querySelector(".minecraft-unauthorized")?.classList.remove("hidden");
+      document.querySelector(".minecraft-sign-in")?.classList.remove("hidden");
+    }
+    document.querySelector(".minecraft-checking")?.classList.add("hidden");
+  }
+}
+
+onMounted(() => {
+  initMinecraftTool();
+});
 </script>
 
 <template>
@@ -98,20 +125,42 @@ async function launchTool(toolName: string) {
           </div>
         </template>
       </CardStructured>
-      <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
-        <template #header>
-          <h2 class="text-xl font-bold flex gap-1 overflow-hidden whitespace-nowrap">Minecraft Launcher<badge background="#00000075">FT</badge></h2>
-        </template>
-        <template #content>
-          <div class="flex w-full zyn-ov-darker-500 p-2 zyn-br-md">
-            Not implemented yet
-          </div>
-        </template>
-        <template #footer>
-          <div class="w-100 flex justify-end align-bottom min-h-9">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" onclick="this.classList.remove('zyn-ov-brighter-200'); this.classList.add('bg-red-900'); this.innerText = 'FAILED';">Launch</button>
-          </div>
-        </template>
+      <CardStructured class="minecraft-tool zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
+          <template #header>
+            <h2 class="text-xl font-bold flex gap-1 overflow-hidden whitespace-nowrap">Minecraft Launcher<badge background="#00000075">FT</badge></h2>
+          </template>
+          <template #content>
+            <div class="minecraft-initial">
+              Not supported on your device/frontend
+            </div>
+            <div class="minecraft-checking hidden">
+              <div class="flex">
+                <p class="animate-spin mw-4 mh-4 p-0 m-0 overflow-hidden w-4 h-4 flex items-center text-center justify-center mr-1">
+                  <i class="icon-loader-circle animate-spin"></i>
+                </p>
+                <p class="p-0 m-0 h-4 flex justify-center items-center text-center">Loading Minecraft integration...<br></p>
+              </div>
+              <p>Checking Microsoft account authentication...</p>
+            </div>
+            <div class="minecraft-unauthorized hidden">
+              <div class="flex w-full zyn-ov-darker-500 p-2 zyn-br-md">
+                <p>
+                  <strong>Unauthorized!</strong> Please sign in with your Microsoft account!
+                </p>
+              </div>
+            </div>
+            <div class="minecraft-authorized hidden">
+              <div class="flex w-full zyn-ov-darker-500 p-2 zyn-br-md">
+                Not implemented yet
+              </div>
+            </div>
+          </template>
+          <template #footer>
+            <div class="w-100 flex justify-end align-bottom min-h-9">
+              <button class="minecraft-sign-in hidden" onclick="this.innerText = 'Working...'; this.classList.add('disabled'); this.disable();"><i class="bi bi-microsoft mr-2"></i>Sign in</button>
+              <button class="minecraft-launch hidden">Launch</button>
+            </div>
+          </template>
       </CardStructured>
       <CardStructured class="zyn-ov-brighter-200 opacity-75 transition-all text-white" border="1px solid var(--zyn-ov-brighter-200)">
         <template #header>
@@ -124,7 +173,7 @@ async function launchTool(toolName: string) {
         </template>
         <template #footer>
           <div class="w-100 flex justify-end align-bottom min-h-9">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="cloneWindow();">Clone</button>
+            <button style="border: 1px solid var(--zyn-ov-brighter-200);" @click="cloneWindow();">Clone</button>
           </div>
         </template>
       </CardStructured>
@@ -139,7 +188,7 @@ async function launchTool(toolName: string) {
         </template>
         <template #footer>
           <div class="w-100 flex justify-end align-bottom min-h-9">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('SerwiN'); e.target.innerText = 'Show'; }">Launch</button>
+            <button style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('SerwiN'); e.target.innerText = 'Show'; }">Launch</button>
           </div>
         </template>
       </CardStructured>
@@ -154,7 +203,7 @@ async function launchTool(toolName: string) {
         </template>
         <template #footer>
           <div class="w-100 flex justify-end align-bottom min-h-9">
-            <button class="zyn-ov-brighter-200 px-4 py-1 zyn-br-md absolute bottom-3" style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('JSON-Explorer'); e.target.innerText = 'Show'; }">Launch</button>
+            <button style="border: 1px solid var(--zyn-ov-brighter-200);" @click="(e: any) => { launchTool('JSON-Explorer'); e.target.innerText = 'Show'; }">Launch</button>
           </div>
         </template>
       </CardStructured>

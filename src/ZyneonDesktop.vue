@@ -79,47 +79,47 @@
       <template #left data-tauri-drag-region>
        <DesktopSideMenu id="navigation" class="desktop-side-menu" data-tauri-drag-region>
          <template #top data-tauri-drag-region>
-           <button class="btn" onclick="this.parentElement.parentElement.classList.toggle('active')">
+           <a class="btn" onclick="this.parentElement.parentElement.classList.toggle('active')">
              <i class="icon-text-align-justify"></i>
              <span>Toggle menu</span>
-           </button>
+           </a>
          </template>
          <template #center data-tauri-drag-region>
-           <button id="dashboard-button" class="btn active" @click="showPage('dashboard')">
+           <a id="dashboard-button" class="btn active" @click="showPage('dashboard')">
              <i class="icon-gallery-vertical-end"></i>
              <span>Dashboard</span>
-           </button>
-           <button id="discover-button" class="btn" @click="showPage('discover')">
+           </a>
+           <a id="discover-button" class="btn" @click="showPage('discover')">
              <i class="icon-search"></i>
              <span>Discover</span>
-           </button>
-           <button id="library-button" class="btn" @click="showPage('library')">
+           </a>
+           <a id="library-button" class="btn" @click="showPage('library')">
              <i class="icon-library"></i>
              <span>Library</span>
-           </button>
-           <button id="tools-button" class="btn" @click="showPage('tools')">
+           </a>
+           <a id="tools-button" class="btn" @click="showPage('tools')">
              <i class="icon-wrench"></i>
              <span>Tools & Experiments</span>
-           </button>
+           </a>
          </template>
          <template #bottom data-tauri-drag-region>
-           <button class="btn hover:background-color-blue-400" onclick="window.location.reload();">
+           <a class="btn hover:background-color-blue-400" onclick="window.location.reload();">
              <i class="icon-rotate-cw"></i>
              <span>Reload (F5/CTRL + R)</span>
-           </button>
-           <button class="btn" disabled>
+           </a>
+           <a class="btn disabled">
              <i class="icon-bell"></i>
              <span>Notifications</span>
-           </button>
+           </a>
            <hr class="opacity-20 mb-2">
-           <button id="downloads-button" class="btn" @click="showPage('downloads')">
+           <a id="downloads-button" class="btn" @click="showPage('downloads')">
              <i class="icon-download"></i>
              <span>Downloads</span>
-           </button>
-           <button id="settings-button" class="btn" @click="showPage('settings')">
+           </a>
+           <a id="settings-button" class="btn" @click="showPage('settings')">
              <i class="icon-bolt"></i>
              <span>Settings</span>
-           </button>
+           </a>
          </template>
        </DesktopSideMenu>
       </template>

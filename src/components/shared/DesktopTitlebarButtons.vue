@@ -30,3 +30,9 @@ const handleClose = async () => {
     <button type="button" @click="handleClose" class="red" id="titlebar-button-close"><i class="icon-x"></i></button>
   </div>
 </template>
+
+<style scoped>
+  button {
+    border: none;
+  }
+</style>
