@@ -8,7 +8,7 @@
 
 **Zyneon Desktop** is an instance-based Minecraft modding utility and launcher featuring a modern, sleek user interface.
 
-It is the official successor to the [NEXUS App](https://github.com/nerotvlive/nexus-app). As this project is a complete rewrite, we recommend using the NEXUS App for production use while this version is under heavy development.
+This is the official successor to the [NEXUS App](https://github.com/nerotvlive/nexus-app). As this project is a complete rewrite, we recommend using the NEXUS App for production use while this version is under heavy development.
 
 > [!WARNING]
 > **Early Stage Development:** Zyneon Desktop is currently **not production-ready**. At this moment, it serves primarily for development purposes and demonstrating the new UI concept.
