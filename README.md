@@ -1,7 +1,7 @@
 # Zyneon Desktop [![v27/0.13: Alpha](https://img.shields.io/badge/v27/0.13-Alpha-orange.svg)](#) [![AGPL 3.0-or-later License](https://img.shields.io/badge/License-AGPL%203.0--or--later-yellow.svg)](https://github.com/zyneonstudios/desktop/blob/main/LICENSE.md)
 
 [![NodeJS](https://img.shields.io/badge/Node.js-24_LTS+-green?style=for-the-badge)](https://nodejs.org/en/download)
-[![PNPM](https://img.shields.io/badge/pnpm-11.10.0-blue?style=for-the-badge)](https://pnpm.io/installation)
+[![PNPM](https://img.shields.io/badge/pnpm-11.22.0-blue?style=for-the-badge)](https://pnpm.io/installation)
 [![Rust](https://img.shields.io/badge/Rust-1.96.1-yellow?style=for-the-badge)](https://www.rust-lang.org/tools/install)
 
 
@@ -51,7 +51,7 @@ To build Zyneon Desktop locally, you will need the following prerequisites:
 | **OS**       | Linux (recommended), Windows 11+, (macOS)  | Mainly developed on Arch Linux (btw) atm                 |
 | **Tauri v2** | Follow the platform-specific prerequisites | [See here](https://v2.tauri.app/start/prerequisites/)    |
 | **Node.js**  | Use the version required by Tauri v2       | [nodejs.org](https://nodejs.org/)                        |
-| **pnpm**     | `>=11.10.0`                                | [pnpm.io](https://pnpm.io/)                              |
+| **pnpm**     | `>=11.22.0`                                | [pnpm.io](https://pnpm.io/)                              |
 | **Rust**     | `>=1.96.1`                                 | [rust-lang.org](https://www.rust-lang.org/tools/install) |
 
 > [!NOTE]
